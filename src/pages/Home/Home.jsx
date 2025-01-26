@@ -9,15 +9,15 @@ import ContactSection from '../../components/ContactSection/ContactSection'
 import Collaboration from '../../components/Collabaration/Collabaration'
 import AboutSection from '../../components/AboutSection/AboutSection'
 import AnimationNumber from '../../components/AnimationNumber/AnimationNumber'
-import Faqsection from '../../components/FaqSection/FaqSection'
+// import Faqsection from '../../components/FaqSection/FaqSection'
 import CustomSection from '../../components/CustomSection/CustomSection'
 import ServiceCardSwiper from '../../components/ServiceCard/ServiceCardSwiper'
 const Home = () => {
-  const heroSectionContent={
-    paragraph:'A specialized IT services and business consulting solutions designed to help companies optimize their technology and drive growth. From designing to software development  end-to-end services that enable businesses to thrive. ',
-    normalHeading:'Grow Your Business With ',
-    coloredHeading:'Powerful IT Technology',
-    image:homeHeroSectionImage
+  const heroSectionContent = {
+    paragraph: 'A specialized IT services and business consulting solutions designed to help companies optimize their technology and drive growth. From designing to software development  end-to-end services that enable businesses to thrive. ',
+    normalHeading: 'Grow Your Business With ',
+    coloredHeading: 'Powerful IT Technology',
+    image: homeHeroSectionImage
   }
   const aboutobj = {
     description: 'Ziostech Solutions Private Limited provide specialized IT services and business consulting solutions designed to help companies optimize their technology and drive growth. From designing to software development, we provide end-to-end services that enable businesses to thrive. We ensuring that your businesses or startups are equipped with the right tools to thrive in a digital world for long-term success.',
@@ -25,15 +25,15 @@ const Home = () => {
   }
   return (
     <>
-      <TopNavbar/>
-      <HeroSection paragraph={heroSectionContent.paragraph} normalHeading={heroSectionContent.normalHeading} coloredHeading={heroSectionContent.coloredHeading} image={heroSectionContent.image}  showButton={true} routePath='/services' />
+      <TopNavbar />
+      <HeroSection paragraph={heroSectionContent.paragraph} normalHeading={heroSectionContent.normalHeading} coloredHeading={heroSectionContent.coloredHeading} image={heroSectionContent.image} showButton={true} routePath='/services' />
       <CustomSection />
-      <ServiceCardSwiper/>
+      <ServiceCardSwiper />
       <AboutSection obj={aboutobj} />
       <AnimationNumber />
-      <ProjectSwiper/>
+      <ProjectSwiper />
       <Collaboration />
-      <Testimonials/>
+      <Testimonials />
       <ContactSection />
       {/* <Faqsection /> */}
       <FooterSection />

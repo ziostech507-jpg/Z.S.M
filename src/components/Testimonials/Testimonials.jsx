@@ -3,57 +3,101 @@ import "./Testimonials.css";
 import Slider from "react-slick";
 import TestimonialCard from "./TestimonialCard";
 import './TestimonialCard.css'
-import testimonialImage1 from '../../assets/images/sandeep.jpg'
-import testimonialImage2 from '../../assets/images/saurabh_visionaryowner.jpg'
-import testimonialImage3 from '../../assets/images/avatar.jpg'
+import sandeep from '../../assets/images/sandeep.jpg'
+import Raghubh from '../../assets/images/saurabh_visionaryowner.jpg'
+import Narendra from '../../assets/images/avatar.jpg'
+import CarlosMendez from '../../assets/images/CarlosMendez.png'
+import Aiko from '../../assets/images/Aiko_Tanaka.png'
+import Emily from '../../assets/images/Emily_Johnson.png'
+import Liam from '../../assets/images/Liam.png'
+import Sofia from '../../assets/images/Sofia.png'
+import Raj from '../../assets/images/RajPatel.png'
+import Hannah from '../../assets/images/Hannah.png'
 const Testimonials = () => {
-  //   const data2=[{
-  //     id: 1,
-  //     image: "https://imgv3.fotor.com/images/slider-image/A-clear-close-up-photo-of-a-woman.jpg",
-  //     name: "Sandeep Yadav  ",
-  //     position: "CEO & Founder  (Sunrise Diagnostic Services)",
-  //     testimonial:
-  //       "Working with Ziostech Solutions was an absolute game-changer for our business. Their unparalleled software development expertise is commendable, and the final product significantly enhanced our operations. Their deep understanding of our needs and provided valuable insights that greatly improved the outcome of our projects.",
-  //   },
-  //   {
-  //     id: 2,
-  //     image: "https://imgv3.fotor.com/images/slider-image/A-clear-close-up-photo-of-a-woman.jpg",
-  //     name: "MWO(RETD.)Raghubh Singh",
-  //     position: "M.D. & CEO   (Saurabh Visionary Ventures) ",
-  //     testimonial:
-  //       "Ziostech has been exceptional in delivering innovative and user-friendly tech solutions. As a coaching institute, we needed a dynamic online platform, and they exceeded our expectations with their professionalism, timely delivery, and seamless communication. Highly recommended for anyone seeking reliable tech partners. Kudos to the team!",
-  //   },
-  //   {
-  //     id: 3,
-  //     image: "https://imgv3.fotor.com/images/slider-image/A-clear-close-up-photo-of-a-woman.jpg",
-  //     name: "Narendra Singh ",
-  //     position: "CEO & Founder (Avni Hospital)",
-  //     testimonial:
-  //       "Avni Hospital greatly appreciates Ziostech for their excellent tech solutions. They delivered a user-friendly platform tailored to our needs with professionalism and expertise. Highly recommended for reliable and innovative services!",
-  //   },
-  // ];
+
   const data = [
+    // Testimonial 1
     {
-      img: testimonialImage1,
-      testimonialName: "Sandeep Yadav ",
-      testimonialPosition: "CEO & Founder  (Sunrise Diagnostic Services)",
+      img: sandeep,
+      testimonialName: "Sandeep Yadav",
+      testimonialPosition: "CEO & Founder (Sunrise Diagnostic Services)",
       aboutTestimonial:
-        "Working with Ziostech Solutions was an absolute game-changer for our business. Their unparalleled software development expertise is commendable, and the final product significantly enhanced our operations. Their deep understanding of our needs and provided valuable insights that greatly improved the outcome of our projects.",
+        "Working with Ziostech Solutions transformed our business. Their expertise, insights, and innovative solutions enhanced operations and improved project outcomes.",
     },
+    // Testimonial 2
     {
-      img: testimonialImage2,
-      testimonialName: "MWO(RETD.)Raghubh Singh",
-      testimonialPosition: "M.D. & CEO   (Saurabh Visionary Ventures) ",
+      img: CarlosMendez,
+      testimonialName: "Carlos Mendez",
+      testimonialPosition: "CEO (Mendez Enterprises)",
       aboutTestimonial:
-        "Ziostech has been exceptional in delivering innovative and user-friendly tech solutions. As a coaching institute, we needed a dynamic online platform, and they exceeded our expectations with their professionalism, timely delivery, and seamless communication. Highly recommended for anyone seeking reliable tech partners. Kudos to the team!",
+        "Partnering with Ziostech enhanced our digital presence. Their solutions are top-notch, and their support is unparalleled.",
     },
+    // Testimonial 3
     {
-      img: testimonialImage3,
+      img: Raghubh,
+      testimonialName: "MWO Raghubh Singh",
+      testimonialPosition: "M.D. & CEO (Saurabh Visionary Ventures)",
+      aboutTestimonial:
+        "Ziostech exceeded expectations, delivering a dynamic platform with professionalism, timely delivery, and exceptional communication. Highly recommended for innovative tech solutions.",
+    },
+    // Testimonial 4
+    {
+      img: Aiko,
+      testimonialName: "Aiko Tanaka",
+      testimonialPosition: "CTO (Tanaka Innovations)",
+      aboutTestimonial:
+        "Ziostech's expertise transformed our platform, leading to increased user engagement. Their professionalism and insight were invaluable.",
+    },
+    // Testimonial 5
+    {
+      img: Narendra,
       testimonialName: "Narendra Singh",
       testimonialPosition: "CEO & Founder (Avni Hospital)",
-      aboutTestimonial: "Avni Hospital greatly appreciates Ziostech for their outstanding tech solutions. They delivered a highly efficient and user-friendly platform, tailored specifically to our needs. Their professionalism, expertise, and dedication were evident throughout the process. We highly recommend Ziostech for their reliable, innovative services and exceptional customer support.",
+      aboutTestimonial:
+        "Avni Hospital values Ziostech's tailored, efficient platform. Their professionalism, expertise, and dedication ensured innovative solutions and outstanding customer support.",
+    },
+    // Testimonial 6
+    {
+      img: Emily,
+      testimonialName: "Emily Johnson",
+      testimonialPosition: "Marketing Director (GlobalTech Solutions)",
+      aboutTestimonial:
+        "Ziostech's innovative approach streamlined our processes, boosting efficiency and productivity. Their team's dedication and expertise are truly commendable.",
+    },
+    // Testimonial 7
+    {
+      img: Liam,
+      testimonialName: "Liam O'Connor",
+      testimonialPosition: "Managing Director (O'Connor Financials)",
+      aboutTestimonial:
+        "Ziostech delivered exceptional solutions tailored to our needs. Their team's commitment and proficiency exceeded our expectations.",
+    },
+    // Testimonial 8
+    {
+      img: Sofia,
+      testimonialName: "Sofia Rossi",
+      testimonialPosition: "Founder (Rossi Design Studio)",
+      aboutTestimonial:
+        "Collaborating with Ziostech was a game-changer. Their innovative solutions and attentive service significantly benefited our projects.",
+    },
+    // Testimonial 9
+    {
+      img: Raj,
+      testimonialName: "Raj Patel",
+      testimonialPosition: "COO (Patel Logistics)",
+      aboutTestimonial:
+        "Ziostech's solutions optimized our operations, leading to improved efficiency. Their expertise and support were instrumental in our success.",
+    },
+    // Testimonial 10
+    {
+      img: Hannah,
+      testimonialName: "Hannah Muller",
+      testimonialPosition: "Head of Development (Muller Tech)",
+      aboutTestimonial:
+        "Ziostech's professional approach and innovative solutions significantly advanced our development projects. Their team's dedication is impressive.",
     },
   ];
+
   var settings = {
     dots: false,
     infinite: true,

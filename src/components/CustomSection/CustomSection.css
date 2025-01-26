@@ -1,7 +1,6 @@
-.custom-container {
+/* .custom-container {
     margin: 0 auto;
     padding: 100px 114px;
-    /* height: 100vh; */
 }
 
 .custom {
@@ -47,7 +46,6 @@
 .custom-left {
     flex: 1;
     position: relative;
-    /* text-align: right; */
     padding-left: 12px;
 }
 
@@ -69,8 +67,6 @@
 
 @media (max-width:1520px) {
     .custom-left::before {
-        /* top: -10px;
-        left: 2px; */
         width: calc(80% + 15px);
         height: calc(80% + 15px);
     }
@@ -89,7 +85,6 @@
         margin: 0px 0px;
     }
     .custom {
-        /* display: block; */
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
@@ -102,7 +97,6 @@
     .custom-left img {
         width: 100%;
         height: auto;
-        /* border-radius: 30px; */
     }
     .custom-right h1 {
         font-size: 32px;
@@ -112,5 +106,157 @@
     }
     .custom-btn {
         margin-left: 0px;
+    }
+} */
+
+.customSectionContainer {
+    height: auto;
+    /* background-color: #0E1518; */
+    padding: 8vh 0vw 23vh 0vw;
+    gap: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+}
+
+.customSectionContentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 500px;
+}
+
+.customSectionHeading {
+    font-size: 50px;
+    background: linear-gradient(to right, #4A6DF2, #FF9800 40%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.customSectionParagraph {
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: .5px;
+}
+
+.headingHighlightedText {
+    background: linear-gradient(to left, #446CFB, #FF9800);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.customSectionImageContainer {
+    width: 500px;
+    height: 400px;
+    border-radius: 0px 40px 40px 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.customSectionImageContainer img {
+    width: 95%;
+    height: 93%;
+    /* --s: 10px;
+    
+    width: round(var(--w), var(--s));
+    aspect-ratio: 1;
+    padding: calc(var(--s)/2);
+    box-sizing: border-box;
+    background: conic-gradient(#CD8C52, #5E9FA3, #CD8C52);
+    border-radius: calc(.866*var(--s));
+    --_r: calc(var(--s)/(2*sqrt(2)));
+    --_c: var(--_r), #000 100%, #0000 calc(100% + 1px);
+    mask: radial-gradient(var(--_r), #000 calc(100% - 1px), #0000) 0 0/var(--s) var(--s), conic-gradient(#000 0 0) subtract no-repeat 50%/calc(100% - var(--s)/2) calc(100% - var(--s)/2), radial-gradient(var(--_r) at 50% var(--_c)) calc(var(--s)/2) calc(-1*var(--_r))/var(--s) 100%, radial-gradient(var(--_r) at var(--_c)) calc(-1*var(--_r)) calc(var(--s)/2)/100% var(--s);
+     */
+    border-radius: 0px 40px 40px 40px;
+    border-bottom: #FF9800 7px solid;
+    border-right: #4A6DF2 7px solid;
+}
+
+
+/* .customSectionImageContainer::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -10px;
+    width: calc(85% + 15px);
+    height: calc(85% + 15px);
+    border-top: 10px solid;
+    border-right: 10px solid;
+    border-image-source: linear-gradient(to right, #2D8FCE, #FF9800);
+    border-image-slice: 1;
+    border-image-repeat: stretch;
+    pointer-events: none;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    background: #FF9800;
+} */
+
+@media (max-width:931px) {
+    .customSectionHeading {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .customSectionContainer {
+        padding: 8vh 12vw;
+    }
+    .customSectionContentContainer {
+        width: 400px;
+    }
+    .customSectionImageContainer {
+        width: 450px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .customSectionContainer {
+        padding: 6vh 6vw;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .customSectionContentContainer {
+        width: 100%;
+    }
+    .customSectionHeading {
+        font-size: 40px;
+    }
+    .customSectionImageContainer {
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .customSectionContainer {
+        padding: 4vh 4vw;
+    }
+    .customSectionContentContainer {
+        width: 100%;
+    }
+    .customSectionHeading {
+        font-size: 30px;
+    }
+    .customSectionImageContainer {
+        width: 90%;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .customSectionContainer {
+        padding: 8vh 8vw;
+    }
+    .customSectionParagraph {
+        line-height: 25px;
     }
 }

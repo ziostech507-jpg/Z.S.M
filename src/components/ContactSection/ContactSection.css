@@ -195,6 +195,9 @@
         /* flex: 0 0 100%; */
         margin-bottom: 30px;
     }
+    .right-column {
+        padding: 0.5rem;
+    }
     .right-column img.project-gif {
         max-width: 100%;
     }
