@@ -1,6 +1,5 @@
 import React from 'react'
 import './OurProjects.css';
-import LetstartBtn from '../../components/Button/Button'
 import projectimg1 from '../../assets/images/ekta.png'
 import projectimg2 from '../../assets/images/medicityHospital.jpg'
 import projectimg3 from '../../assets/images/sunrise.jpg'
@@ -8,7 +7,6 @@ import projectimg4 from '../../assets/images/saurabh_visionary.jpg'
 import projectimg5 from '../../assets/images/avni.png'
 import projectimg6 from '../../assets/images/kvl.jpg'
 const OurProjects = () => {
- 
   const ourProjectCardContent = [
     {
       id: 1,
