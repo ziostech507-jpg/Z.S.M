@@ -139,10 +139,15 @@
     font-size: 40px;
     color: #FDF9FA;
     text-decoration: none;
+    cursor: none !important;
 }
 
 .social-icons a:hover {
     color: #ffffff;
+    cursor: none;
+}
+#linkedinIcon{
+    cursor: pointer !important;
 }
 
 

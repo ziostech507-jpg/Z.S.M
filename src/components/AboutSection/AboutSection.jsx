@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
-import aboutSectionImage from '../../assets/images/aboutSectionImage.jpeg'
+import aboutSectionImage from '../../assets/images/aboutSectionImage.png'
 import "./AboutSection.css";
 
 const AboutSection = (props) => {
@@ -11,11 +11,11 @@ const AboutSection = (props) => {
 
                 <h1>{props.obj.title ? props.obj.title : value}</h1>
                 <p>{props.obj.description}</p>
-                {props.obj.buttonTitle && <Button buttonTitle={props.obj.buttonTitle} />}
+                {props.obj.buttonTitle && <Button buttonTitle={props.obj.buttonTitle}routePath="/about" />}
             </div>
             <div className="about-section-image">
                 <img src={props.obj?.imgSrc ? props.obj.imgSrc : aboutSectionImage}
-                    alt="aboutSectionImage" />
+                    alt={props.obj?.imgSrc ? props.obj.imgSrc : "About Section Image"} />
             </div>
         </div>
     );

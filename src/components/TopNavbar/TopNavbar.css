@@ -92,9 +92,13 @@
   
   @media (max-width: 480px) {
     /* Further adjustment for very small screens */
+    .topNavContainer{
+      margin-left:10px;
+    } 
     .ziostechLogo {
-      width: 150px; /* Resize further for very small screens */
+      width: 170px; /* Resize further for very small screens */
       height:auto; /* Adjust height */
+      
     }
   }
   

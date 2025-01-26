@@ -10,8 +10,6 @@ const HeroSection = (props) => {
       <h1 className='heroSectionHeading'>{props.normalHeading} <span className='headingHighlightedText'>{props.coloredHeading}</span> </h1>
       <p className='heroSectionParagraph' >{props.paragraph}</p>
      {props.showButton?<LetstartBtn buttonTitle={props.buttonTitle} routePath={props.routePath}/>:null}
-      
-    
       </div>
       <div className='cardImageContainer'>
         <img src={props.image} className='card-image' loading='lazy'  alt="Hero section"  />

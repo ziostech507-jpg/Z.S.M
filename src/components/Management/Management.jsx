@@ -1,10 +1,10 @@
 import React from "react";
 import "./Management.css";
-import imgSrc from "../../assets/images/managementSection.jpeg"
+import imgSrc from "../../assets/images/managementSection.png"
 import AboutSection from "../AboutSection/AboutSection";
 // import aditya from "../../assets/images/adityacard.jpg"
 import adityaProfile from "../../assets/images/aditya.jpg"
-import deepProfile from '../../assets/images/Deep-profile.jpeg'
+import deepProfile from '../../assets/images/Deep-profile.png'
 import avtar from '../../assets/images/avatar.jpg'
 import hariProfile from '../../assets/images/hariProfile.jpg'
 const aboutobj = {

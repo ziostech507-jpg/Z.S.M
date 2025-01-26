@@ -41,14 +41,14 @@
 
 .ourProjectCardImageContainer {
     flex: 1;
-    max-width: 45%;
+    max-width: 70%;
     text-align: center;
 }
 
 .ourProjectCardImageContainer img {
     width: 100%;
     max-width: 400px;
-    height: auto;
+    height:auto;
     border-radius: 20px;
     object-fit: cover;
 }
@@ -119,5 +119,11 @@
     .ourProjectsContentContainer p {
         font-size: 0.9rem;
         text-align: left;
+    }
+}
+
+@media (max-width: 1024px) {
+    .ourProjectsCardContainer {
+        gap: 20px;
     }
 }

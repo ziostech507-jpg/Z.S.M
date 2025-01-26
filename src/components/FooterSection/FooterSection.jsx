@@ -76,8 +76,8 @@ const FooterSection = () => {
                     <h3>Subscribe to our Newsletter</h3>
                     <p>Join and stay informed about the latest trends.</p>
                     <div className="newsletter-input">
-                        <input type="email" placeholder="Enter your email address" />
-                        <button>Subscribe</button>
+                        <input type="email" placeholder="Enter your email address"   disabled/>
+                        <button style={{padding:'10px'}} disabled>Subscribe</button>
                     </div>
                 </div>
                 <div className="social-icons">
@@ -87,7 +87,7 @@ const FooterSection = () => {
                     <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faInstagram} />
                     </a>
-                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/company/ziostechsolutions/posts/?feedView=all" target="_blank" rel="noopener noreferrer" id='linkedinIcon'>
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                     <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">

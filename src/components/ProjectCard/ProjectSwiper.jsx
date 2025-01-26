@@ -8,7 +8,7 @@ import projectimg1 from '../../assets/images/ekta.png'
 import projectimg2 from '../../assets/images/medicityHospital.jpg'
 import projectimg3 from '../../assets/images/sunrise.jpg'
 import projectimg4 from '../../assets/images/saurabh_visionary.jpg'
-import projectimg5 from '../../assets/images/avni.jpeg'
+import projectimg5 from '../../assets/images/avni.png'
 
 import './ProjectSwiper.css';
 import ProjectCard from './ProjectCard';

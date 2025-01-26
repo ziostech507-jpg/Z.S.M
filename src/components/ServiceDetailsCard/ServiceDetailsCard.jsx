@@ -1,34 +1,20 @@
+
+
+
 import React from "react";
 import "./ServiceDetailsCard.css";
 import aiServiceImage from "../../assets/images/aiServiceImage.png";
-const ServiceDetailsCard = () => {
-  const serviceDetailsData = [
-    {
-      serviceName: '1) AIXpertSites',
-      serviceDescription: "AIExpertSites services in IT refer to specialized platforms or services that provide expert knowledge, tools, and solutions in the realm of Artificial Intelligence (AI). These services typically offer consultancy to help businesses understand and implement AI technologies effectively. They also provide custom AI solutions such as machine learning models, natural language processing systems, or AI-driven analytics tailored to meet specific business needs. Additionally, AIExpertSites often grant access to AI tools, software, or platforms that enable companies to develop, deploy, and scale AI applications seamlessly. Alongside development services, they may also offer research resources, case studies, and educational materials to deepen understanding of AI. Ultimately, AIExpertSites services guide businesses in adopting AI, ensuring smooth integration with existing systems and aligning AI solutions with overall business goals, helping companies stay competitive in an AI-driven marketplace.",
-      // tech 1
-      serviceTech1: 'Frontend Development :',
-      serviceTech1Point1: 'HTML5/CSS3/JavaScript: For structuring and styling web pages.',
-      serviceTech1Point2: 'React.js/Angular/Vue.js: Modern JavaScript frameworks for dynamic, responsive user interfaces.',
-      serviceTech1point3: 'Bootstrap/Tailwind CSS: Frameworks for responsive design and UI components.',
-      // tech 2
-      serviceTech2: 'Backend Development :',
-      serviceTech2Point1: 'Node.js/Express.js: Popular for scalable and efficient server-side operations.',
-      serviceTech2Point2: 'Django/Flask (Python): Python-based web frameworks for backend APIs.',
-      serviceTech2point3: 'Ruby on Rails: A full-stack framework with simplicity & productivity in mind.',
-      serviceTech2point4: 'PHP/Laravel: Server-side scripting languages and frameworks.',
-      // tech 3
-      serviceTech3: 'AI and Machine Learning :',
-      serviceTech3Point1: 'TensorFlow/PyTorch: For training AI models.',
-      serviceTech3Point2: 'OpenAI APIs/Transformers: Pre-trained AI models for natural language processing (NLP), computer vision, etc.',
-      serviceTech3point3: 'AWS/GCP AI Services: Cloud-based AI and ML solutions like AWS Sagemaker or Google AutoML.',
+import personalSoftwareServiceImage from "../../assets/images/personalSoftwareServiceImage.png";
+import cyberSecurityServiceImage from "../../assets/images/cyberSecurityServiceImage.png";
+import AppDevelopmentServiceImage from "../../assets/images/AppDevelopmentServiceImage.png";
+import webAppServiceImage from "../../assets/images/webAppServiceImage.png";
+import webDevelopmentServiceImage from "../../assets/images/webDevelopmentServiceImage.png";
+import dataSercurityServiceImage from "../../assets/images/dataSercurityServiceImage.png";
+import AiMlServiceImage from "../../assets/images/AiMlServiceImage.png";
 
-      // tech 4
-      serviceTech4: 'APIs and Integrations :',
-      serviceTech4Point1: 'REST/GraphQL: For API development and communication between frontend and backend.',
-      serviceTech4Point2: 'Third-party APIs: Payment gateways, social media, and more.',
-    }
-  ]
+
+const ServiceDetailsCard = () => {
+  
   return (
     <>
       {/* AIXpertsites */}
@@ -136,7 +122,7 @@ const ServiceDetailsCard = () => {
             Personal software for business in IT services refers to custom-built applications or software solutions tailored specifically to meet the unique needs of a business. Unlike off-the-shelf software, personal software is designed to align closely with a company’s operations, workflows, and goals, ensuring a perfect fit for their processes. This type of software can handle a wide range of functions, including customer relationship management (CRM), inventory control, project management, data analysis, and more. By providing a personalized approach, it allows businesses to improve efficiency, automate routine tasks, and scale operations more effectively. Moreover, personal software offers flexibility, allowing companies to integrate it with other tools or platforms. In the IT services industry, developing personal software for businesses is key to helping them gain a competitive edge by addressing their unique challenges with tailored technological solutions.
           </p>
           <div>
-            <img src={aiServiceImage} alt="" />
+            <img src={personalSoftwareServiceImage} alt="" />
           </div>
         </div>
         <div className="serviceTechDescriptionContainer">
@@ -194,7 +180,7 @@ const ServiceDetailsCard = () => {
             App development in IT services refers to the process of creating software applications tailored to meet specific business needs or consumer demands. This involves designing, coding, testing, and deploying apps that can run on various platforms, such as mobile devices (iOS, Android), desktops, or web browsers. In IT services, app development typically focuses on delivering solutions that enhance business operations, improve customer engagement, and provide seamless access to products or services. Whether it's a mobile app for e-commerce, a web-based platform for customer relationship management, or a productivity tool for internal teams, app development plays a critical role in driving digital transformation. App development in IT services also includes ongoing support and updates to address user feedback, improve functionality, and adapt to changing business needs. By offering customized, efficient, and user-friendly apps, IT services help businesses enhance their digital presence and streamline operations.
           </p>
           <div>
-            <img src={aiServiceImage} alt="" />
+            <img src={AppDevelopmentServiceImage} alt="" />
           </div>
         </div>
         <div className="serviceTechDescriptionContainer">
@@ -248,7 +234,7 @@ const ServiceDetailsCard = () => {
             Web/App upgradation in IT services refers to the process of improving or modernizing an existing website or application to enhance performance, functionality, security, and user experience. This often involves updating the underlying technology stack, optimizing the code, redesigning the user interface (UI), and adding new features to meet evolving business needs or market trends. Upgrading can also address compatibility issues with new operating systems, browsers, or devices, ensuring that the web or mobile app continues to function smoothly across platforms. Additionally, security patches and updates are critical to protect against vulnerabilities and cyber threats. In many cases, upgradation also involves migrating the app to more scalable infrastructure, such as cloud platforms, to support growing user demands. The goal is to keep the web or app relevant, efficient, and aligned with current technological standards while delivering a seamless experience to users.
           </p>
           <div>
-            <img src={aiServiceImage} alt="" />
+            <img src={webAppServiceImage} alt="" />
           </div>
         </div>
         <div className="serviceTechDescriptionContainer">
@@ -301,7 +287,7 @@ const ServiceDetailsCard = () => {
             Web development in IT services involves the creation and maintenance of websites and web applications that enable businesses to establish a strong online presence and deliver services effectively to their users. It encompasses a wide range of tasks, from building static websites to complex dynamic web applications with advanced features like e-commerce, content management systems (CMS), and data analytics. The process begins with front-end development, which focuses on the user interface (UI) and user experience (UX) using technologies like HTML, CSS, and JavaScript. Simultaneously, backend development handles server-side functionality, databases, and APIs, ensuring that the application is secure, scalable, and capable of meeting growing demands. Web development in IT services is essential for businesses to build customized, user-friendly websites and applications that meet their goals, engage customers, and adapt to the evolving digital landscape.
           </p>
           <div>
-            <img src={aiServiceImage} alt="" />
+            <img src={webDevelopmentServiceImage} alt="" />
           </div>
         </div>
         <div className="serviceTechDescriptionContainer">
@@ -368,7 +354,7 @@ const ServiceDetailsCard = () => {
             AI/ML projects may include building recommendation systems, fraud detection systems, or customer segmentation models. These projects also emphasize efficiency and scalability, often leveraging cloud platforms like AWS, Google Cloud, and Microsoft Azure to support AI/ML workloads. By enabling businesses to deliver more personalized, data-driven services, AI/ML projects drive competitive advantages in various industries.
           </p>
           <div>
-            <img src={aiServiceImage} alt="AI/ML Projects" />
+            <img src={AiMlServiceImage} alt="AI/ML Projects" />
           </div>
         </div>
         <div className="serviceTechDescriptionContainer">
@@ -429,7 +415,7 @@ const ServiceDetailsCard = () => {
             Data security and protection in IT services are critical for safeguarding sensitive information from unauthorized access, breaches, and cyberattacks. As businesses increasingly rely on digital systems, ensuring the confidentiality, integrity, and availability of data has become a top priority. IT services employ advanced security measures to protect data at all stages, including encryption, firewalls, intrusion detection systems, and multi-factor authentication. Data protection also involves compliance with legal standards and regulations such as GDPR (General Data Protection Regulation), HIPAA (Health Insurance Portability and Accountability Act), and CCPA (California Consumer Privacy Act) to ensure that sensitive personal information is handled responsibly.
           </p>
           <div>
-            <img src={aiServiceImage} alt="" />
+            <img src={dataSercurityServiceImage} alt="" />
           </div>
         </div>
         <div className="serviceTechDescriptionContainer">
@@ -468,7 +454,7 @@ const ServiceDetailsCard = () => {
             Cybersecurity in IT services refers to the practices, technologies, and processes designed to protect computer systems, networks, and data from cyber threats and attacks. As organizations increasingly rely on digital infrastructure, cybersecurity has become paramount for safeguarding sensitive information and maintaining business continuity. IT services employ a multi-layered approach to cybersecurity, including risk assessment, threat detection, incident response, and compliance with regulatory standards. Key components of cybersecurity include firewalls, intrusion detection systems, encryption, and endpoint protection to safeguard against unauthorized access and data breaches. By integrating comprehensive cybersecurity strategies, IT services help organizations mitigate risks, protect valuable data, and ensure the resilience of their digital operations in an increasingly complex threat landscape.
           </p>
           <div>
-            <img src={aiServiceImage} alt="" />
+            <img src={cyberSecurityServiceImage} alt="" />
           </div>
         </div>
         <div className="serviceTechDescriptionContainer">

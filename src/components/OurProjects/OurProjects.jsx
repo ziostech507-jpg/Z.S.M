@@ -5,37 +5,10 @@ import projectimg1 from '../../assets/images/ekta.png'
 import projectimg2 from '../../assets/images/medicityHospital.jpg'
 import projectimg3 from '../../assets/images/sunrise.jpg'
 import projectimg4 from '../../assets/images/saurabh_visionary.jpg'
-import projectimg5 from '../../assets/images/avni.jpeg'
+import projectimg5 from '../../assets/images/avni.png'
 import projectimg6 from '../../assets/images/kvl.jpg'
 const OurProjects = () => {
-  // const ourProjectCardContent=[
-  //   {
-  //     id:1,
-  //     img:projectimg,
-  //     ourProjectCardHeading:"Dominos",
-  //         ourPorjectCardDescription:"Domino's Pizza partnered to elevate its online presence, focusing on website performance, user experience, and innovative web technologies. Domino's Pizza partnered to elevate its online presence, focusing on website performance, user experience, and innovative web technologies. Domino's Pizza partnered to elevate its online presence, focusing on website performance,  experience, and innovative web technologies."
-  //   },
-  //   {
-  //     img:projectimg,
-  //     ourProjectCardHeading:"Dominos",
-  //         ourPorjectCardDescription:"Domino's Pizza partnered to elevate its online presence, focusing on website performance, user experience, and innovative web technologies. Domino's Pizza partnered to elevate its online presence, focusing on website performance, user experience, and innovative web technologies. Domino's Pizza partnered to elevate its online presence, focusing on website performance,  experience, and innovative web technologies."
-  //   },
-  //   {
-  //     img:projectimg,
-  //     ourProjectCardHeading:"Dominos",
-  //         ourPorjectCardDescription:"Domino's Pizza partnered to elevate its online presence, focusing on website performance, user experience, and innovative web technologies. Domino's Pizza partnered to elevate its online presence, focusing on website performance, user experience, and innovative web technologies. Domino's Pizza partnered to elevate its online presence, focusing on website performance,  experience, and innovative web technologies."
-  //   },
-  //   {
-  //     img:projectimg,
-  //     ourProjectCardHeading:"Dominos",
-  //     ourPorjectCardDescription:"Domino's Pizza partnered to elevate its online presence, focusing on website performance, user experience, and innovative web technologies. Domino's Pizza partnered to elevate its online presence, focusing on website performance, user experience, and innovative web technologies. Domino's Pizza partnered to elevate its online presence, focusing on website performance,  experience, and innovative web technologies."
-  //   },
-  //   {
-  //     img:projectimg,
-  //     ourProjectCardHeading:"Dominos",
-  //         ourPorjectCardDescription:"Domino's Pizza partnered to elevate its online presence, focusing on website performance, user experience, and innovative web technologies. Domino's Pizza partnered to elevate its online presence, focusing on website performance, user experience, and innovative web technologies. Domino's Pizza partnered to elevate its online presence, focusing on website performance,  experience, and innovative web technologies."
-  //   },
-  // ]
+ 
   const ourProjectCardContent = [
     {
       id: 1,
@@ -82,7 +55,7 @@ const OurProjects = () => {
       </div>
       {ourProjectCardContent.map((item, index) => (
         <div className='ourProjectsCardContainer' key={index}>
-          <div className='ourProjectCardImageContainer'><img src={item.img} loading='lazy' alt="Panda" /></div>
+          <div className='ourProjectCardImageContainer'><img src={item.img} loading='lazy' alt={item.img} /></div>
           <div className='ourProjectsContentContainer'>
             <h1>{item.ourProjectCardHeading}</h1>
             <p>{item.ourPorjectCardDescription}</p>

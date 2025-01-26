@@ -4,15 +4,23 @@
     left: 0;
     right: 0;
     background-image: cross-fade(4);
-    /* background-color: #0e1518; Background color */
     padding: 10px 0; /* Adjust padding as needed */
     z-index: 10; /* Ensure it stays on top of other elements */
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
 .bottomNavBarItems {
   display: flex;
   justify-content: center ;
   align-items:baseline;
   gap: 80px;
+  /* width:50%; */
+  background-color: rgba(255, 255, 255, 0.064); /* Transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  padding:15px 50px;
+  border-radius: 20px;
 }
 
 .bottomNavBarItems li {
