@@ -24,14 +24,14 @@ const ContactSection = () => {
         from_phone: phone,
         from_company: company,
         message: message,
-        to_email: "ziostechdirector2024@getDefaultNormalizer.com",
+        to_email: "ziostechdirector2024@gmail.com",
         to_name: "Aditya Singh"
     }
     // console.log(templateParams)
     const send = (e) => {
-        const YOUR_SERVICE_ID = 'service_5we1zyk'
-        const YOUR_TEMPLATE_ID = 'template_l9l7wun'
-        const YOUR_PUBLIC_KEY = '9BDVzqsf0PU_ak6WL'
+        const YOUR_SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID
+        const YOUR_TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID
+        const YOUR_PUBLIC_KEY = process.env.REACT_APP_YOUR_PUBLIC_KEY
         e.preventDefault();
 
         emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, templateParams, YOUR_PUBLIC_KEY)
