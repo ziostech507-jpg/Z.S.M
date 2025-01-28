@@ -19,11 +19,14 @@ const BottomNavBar = () => {
     { name: 'About', route: '/about', icon: AboutIcon },
     { name: 'Services', route: '/services', icon: ServiceIcon },
     { name: 'Projects', route: '/projects', icon: ProjectIcon },
-    { name: 'Products', route: '/products', icon: ProductsIcon },
+    // { name: 'Products', route: '/products', icon: ProductsIcon },
   ];
   const handleItemClick = (item) => {
     if (item.route === '/products') {
       setShowPopup(true); // Show the popup for "Products"
+    }
+    if (location.pathname === item.route) {
+      window.scrollTo(0, 0); // Scroll to top for the same route
     } else {
       navigate(item.route); // Navigate to other routes
     }
@@ -32,52 +35,19 @@ const BottomNavBar = () => {
     setShowDropdown(isOpen);
   };
   return (
-    // <div className="bottomNavBarContainer">
-    //   <ul className='bottomNavBarItems'>
-    //     {navItems.map((item) => (
-    //       <li
-    //         key={item.name}
-    //         className={location.pathname === item.route ? 'active' : ''}
-    //         onClick={() => navigate(item.route)}
-    //       >
-    //         <img src={item.icon} loading='lazy' alt={`${item.name} icon`} />
-    //         <p>{item.name}</p>
-    //       </li>
-    //     ))}
-    //   </ul>
-    // </div>
     <div className="bottomNavBarContainer">
-      <ul className="bottomNavBarItems ">
+      <ul className="bottomNavBarItems">
         {navItems.map((item) => (
           <li
             key={item.name}
-            className={`${location.pathname === item.route ? 'active' : ''} ${item.name === 'Services' ? 'dropup' : ''}`}
-
+            className={location.pathname === item.route ? 'active' : ''}
             onClick={() => handleItemClick(item)}
-          // onMouseEnter={() => item.name === 'Services' && toggleDropdown(true)}
-          // onMouseLeave={() => item.name === 'Services' && toggleDropdown(false)}
           >
-
             <img src={item.icon} loading="lazy" alt={`${item.name} icon`} />
             <p>{item.name}</p>
-
-            {/* dropup */}
-            {/* {item.name === 'Services' && showDropdown && (
-              <ul class="dropup-content">
-                <li>AIXpertSites</li>
-                <li>Personal Software for Business</li>
-                <li>App Development</li>
-                <li>Web/App Upgradation</li>
-                <li>Web Development</li>
-                <li>AI/ML Projects</li>
-                <li>Cyber Security</li>
-              </ul>
-            )} */}
-
           </li>
         ))}
       </ul>
-
       {showPopup && <ComingSoonPopup closePopup={() => setShowPopup(false)} />}
     </div>
   );

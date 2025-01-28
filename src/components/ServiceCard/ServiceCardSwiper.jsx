@@ -1,82 +1,20 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { useNavigate } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import SwiperNavButtons from '../ProjectCard/ProjectSwiperButton'; // Custom navigation buttons
 import './ServiceCardSwiper.css';
 import ServiceCard from './ServiceCard';
-// Service Card images
-import AiMLServiceCardImage from '../../assets/images/AiMlServiceCardImage.png';
-import AiXpertSitesCardimage from '../../assets/images/AiXpertSitesCardimage.png';
-import personalSoftwareServiceCardImage from '../../assets/images/personalSoftwareServiceCardImage.png';
-import webAppServiceCardImage from '../../assets/images/webAppServiceCardImage.png';
-import AppDevelopmentServiceCardImage from '../../assets/images/AppDevelopmentServiceCardImage.png';
-import webDevelopmentServiceCardImage from '../../assets/images/webDevelopmentServiceCardImage.png';
-import dataSercurityServiceCardImage from '../../assets/images/dataSercurityServiceCardImage.png';
-import cyberSecurityServiceCardImage  from '../../assets/images/cyberSecurityServiceCardImage.png';
-// service Card Icons
-import aiMlServiceIcon from '../../assets/Icons/AiMlServiceIcon.png'
-import AiXpertsiteServiceIcon from '../../assets/Icons/AiXpertsiteServiceIcon.png'
-import personalSoftwareServiceCardIcon from '../../assets/Icons/personalSoftwareServiceCardIcon.png'
-import webAppServiceCardIcon from '../../assets/Icons/webAppServiceCardIcon.png'
-import appDevelopmentServiceCardIcon from '../../assets/Icons/appDevelopmentServiceCardIcon.png'
-import webDevelopmentServiceCardIcon from '../../assets/Icons/webDevelopmentServiceCardIcon.png'
-import dataSercurityServiceCardIcon from '../../assets/Icons/dataSercurityServiceCardIcon.png'
-import cyberSecurityServiceCardIcon from '../../assets/Icons/cyberSecurityServiceCardIcon.png';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { SlArrowRightCircle } from "react-icons/sl";
+import ViewAllButton from '../ViewAllButton/ViewAllButton';
 
-function ProjectSwiper() {
-    const data=[
-        {
-            img:AiMLServiceCardImage, 
-            serviceTitle:'AI/ML Projects',
-            serviceDescription:'Forefront of technology, innovation across industries by more intelligent and automated solutions.',
-            serviceIcon:aiMlServiceIcon,
-            
-        },
-        {
-            img:AiXpertSitesCardimage,
-            serviceTitle:'AIXpertSites',
-            serviceDescription:'A blend of "AI" and "Expert," emphasizing your expertise in creating AI-powered websites.',
-            serviceIcon:AiXpertsiteServiceIcon,
-        },
-        {
-            img:personalSoftwareServiceCardImage,
-            serviceTitle:'Personal Software for Business',
-            serviceDescription:'To streamline workflows, improve productivity, and make it easier to organize and automate routine tasks. ',
-            serviceIcon:personalSoftwareServiceCardIcon,
-        },
-        {
-            img:webAppServiceCardImage,
-            serviceTitle:'Web/App Upgradation',
-            serviceDescription:'Updating and enhancing an existing website to improve its performance, security, and user experience.',
-            serviceIcon:webAppServiceCardIcon,
-        },
-        {
-            img:AppDevelopmentServiceCardImage,
-            serviceTitle:'App Development',
-            serviceDescription:'Development involves the process of creating software applications for mobile devices.',
-            serviceIcon:appDevelopmentServiceCardIcon,
-        },
-        {
-            img:webDevelopmentServiceCardImage,
-            serviceTitle:'Web Development',
-            serviceDescription:'Web development involves the creation and maintenance of websites and web applications.',
-            serviceIcon:webDevelopmentServiceCardIcon
-        },
-        {
-            img:dataSercurityServiceCardImage,
-            serviceTitle:'Data security and protection',
-            serviceDescription:'Involves safeguarding data from unauthorized access and ensuring its privacy, integrity, and legal compliance.',
-            serviceIcon:dataSercurityServiceCardIcon,
-        },
-        {
-            img:cyberSecurityServiceCardImage,
-            serviceTitle:'Cyber Security',
-            serviceDescription:'The protection of systems, networks and data from cyber threats and attacks.',
-            serviceIcon:cyberSecurityServiceCardIcon,
-        },
-    ]
+
+function ProjectSwiper(props) {
+    const navigate=useNavigate()
+    
+    const data=props.data;
     return (
         <div className='serviceCardContainer'>
             <h1 className="testimonialHeading"><span>Services Provide</span></h1>
@@ -111,6 +49,9 @@ function ProjectSwiper() {
                             <SwiperSlide key={index}><ServiceCard img={item.img} serviceTitle={item.serviceTitle} serviceIcon={item.serviceIcon}  serviceDescription={item.serviceDescription} /></SwiperSlide>
                         )
                     })}
+                    {/* {props.showRouteButton?  <SwiperSlide className='serviceSwiperRightArrow' title='View All Services' onClick={()=>navigate('/services')}><SlArrowRightCircle/></SwiperSlide>:null} */}
+                    {props.showRouteButton?  <SwiperSlide className='serviceSwiperRightArrow' title='View All Services' onClick={()=>navigate('/services')}><ViewAllButton buttonTitle="View All Services"/></SwiperSlide>:null}
+                  
                     {/* <SwiperSlide><ServiceCard /></SwiperSlide>
                     <SwiperSlide><ServiceCard /></SwiperSlide> */}
                     <SwiperNavButtons /> {/* Custom navigation buttons */}

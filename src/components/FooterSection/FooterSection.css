@@ -9,6 +9,7 @@
 .footer-logo {
     width: 214px;
     text-align: left;
+    cursor: pointer;
     /* margin-bottom: 20px; */
 }
 
@@ -139,7 +140,7 @@
     font-size: 40px;
     color: #FDF9FA;
     text-decoration: none;
-    cursor: none !important;
+    transition: all .1s linear;
 }
 
 .social-icons a:hover {
@@ -149,6 +150,8 @@
 
 #linkedinIcon {
     cursor: pointer !important;
+    color: wheat;
+    cursor: pointer;
 }
 
 
@@ -164,6 +167,24 @@
     color: #FDF9FA;
     font-weight: 400;
     text-align: center;
+}
+
+.footer-industry ul {}
+
+.footer-industry ul li {
+    cursor: default;
+}
+
+.footer-industry ul li:hover {
+    color: #b7b7b7;
+}
+
+.footer-other-service ul li {
+    cursor: default;
+}
+
+.footer-other-service ul li:hover {
+    color: #b7b7b7;
 }
 
 
