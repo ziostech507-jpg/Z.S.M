@@ -9,27 +9,21 @@ const ServicePopUp = () => {
   return (
     <div className='servicePopUpContainer'>
       <ul>
-      <li onClick={handleClick}> AI/ML</li>
-        <li  onClick={handleClick}>AIXpertSites
+      <li onClick={()=>navigate('/ai-ml-projects')}> AI/ML</li>
+        <li  onClick={()=>navigate('/aixpersites')}>AIXpertSites
         </li>
-        <li  onClick={handleClick}>Personal Software for Business
+        <li  onClick={()=>navigate('/personal-software')}>Personal Software for Business</li>
+        <li  onClick={()=>navigate('/web-app-upgradation')}>Web/App Upgradation
 </li>
-        <li  onClick={handleClick}>Web/App Upgradation
-
-</li>
-        <li  onClick={handleClick}>Web/App Upgradation
+        <li  onClick={()=>navigate('/app-developement')}>App Development
 
 </li>
-        <li  onClick={handleClick}>Web Development
+        <li  onClick={()=>navigate('/web-developement')}>Web Development
 
 </li>
-        <li  onClick={handleClick}>Web Development
-
+        <li  onClick={()=>navigate('/cyber-security')}>Cyber Security
 </li>
-        <li  onClick={handleClick}>Cyber Security
-
-
-
+        <li  onClick={()=>navigate('/data-security')}>Data Security
 </li>
         </ul>
     </div>

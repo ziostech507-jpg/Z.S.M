@@ -485,7 +485,7 @@ const TopNavbar = () => {
             <ul className="servicesDropdownMenu">
               <li
                 onClick={() => {
-                  navigate("/service1");
+                  navigate("/ai-ml-projects");
                   setMenuOpen(false);
                 }}
               >
@@ -493,7 +493,7 @@ const TopNavbar = () => {
               </li>
               <li
                 onClick={() => {
-                  navigate("/service2");
+                  navigate("/aixpersites");
                   setMenuOpen(false);
                 }}
               >
@@ -502,7 +502,7 @@ const TopNavbar = () => {
               </li>
               <li
                 onClick={() => {
-                  navigate("/service3");
+                  navigate("/personal-software");
                   setMenuOpen(false);
                 }}
               >
@@ -510,7 +510,7 @@ const TopNavbar = () => {
               </li>
               <li
                 onClick={() => {
-                  navigate("/service3");
+                  navigate("/web-app-upgradation");
                   setMenuOpen(false);
                 }}
               >
@@ -518,7 +518,7 @@ const TopNavbar = () => {
               </li>
               <li
                 onClick={() => {
-                  navigate("/service3");
+                  navigate("/app-developement");
                   setMenuOpen(false);
                 }}
               >
@@ -526,7 +526,7 @@ const TopNavbar = () => {
               </li>
               <li
                 onClick={() => {
-                  navigate("/service3");
+                  navigate("/web-developement");
                   setMenuOpen(false);
                 }}
               >
@@ -536,7 +536,7 @@ const TopNavbar = () => {
               </li>
               <li
                 onClick={() => {
-                  navigate("/service3");
+                  navigate("/data-security");
                   setMenuOpen(false);
                 }}
               >
@@ -544,7 +544,7 @@ const TopNavbar = () => {
               </li>
               <li
                 onClick={() => {
-                  navigate("/service3");
+                  navigate("/cyber-security");
                   setMenuOpen(false);
                 }}
               >
