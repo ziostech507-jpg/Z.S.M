@@ -31,7 +31,7 @@ const AboutSection = (props) => {
 
             <div className="aboutSectionImageContainer">
                 <img
-                    src={props.obj?.imgSrc ? props.obj.imgSrc : aboutSectionImage}
+                    src={props.obj?.imgSrc ? props.obj.imgSrc : aboutSectionImage} loading="lazy"
                     alt={props.obj?.imgSrc ? props.obj.imgSrc : 'About Section Image'}
                 />
             </div>

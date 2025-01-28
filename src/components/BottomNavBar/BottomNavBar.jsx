@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './BottomNavBar.css';
 import HomeIcon from '../../assets/Icons/home-icon.png';
@@ -11,6 +11,7 @@ const BottomNavBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [showPopup, setShowPopup] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
 
 
   const navItems = [
@@ -26,6 +27,9 @@ const BottomNavBar = () => {
     } else {
       navigate(item.route); // Navigate to other routes
     }
+  };
+  const toggleDropdown = (isOpen) => {
+    setShowDropdown(isOpen);
   };
   return (
     // <div className="bottomNavBarContainer">
@@ -43,21 +47,39 @@ const BottomNavBar = () => {
     //   </ul>
     // </div>
     <div className="bottomNavBarContainer">
-    <ul className="bottomNavBarItems">
-      {navItems.map((item) => (
-        <li
-          key={item.name}
-          className={location.pathname === item.route ? 'active' : ''}
-          onClick={() => handleItemClick(item)}
-        >
-          <img src={item.icon} loading="lazy" alt={`${item.name} icon`} />
-          <p>{item.name}</p>
-        </li>
-      ))}
-    </ul>
+      <ul className="bottomNavBarItems ">
+        {navItems.map((item) => (
+          <li
+            key={item.name}
+            className={`${location.pathname === item.route ? 'active' : ''} ${item.name === 'Services' ? 'dropup' : ''}`}
 
-    {showPopup && <ComingSoonPopup closePopup={() => setShowPopup(false)} />}
-  </div>
+            onClick={() => handleItemClick(item)}
+          // onMouseEnter={() => item.name === 'Services' && toggleDropdown(true)}
+          // onMouseLeave={() => item.name === 'Services' && toggleDropdown(false)}
+          >
+
+            <img src={item.icon} loading="lazy" alt={`${item.name} icon`} />
+            <p>{item.name}</p>
+
+            {/* dropup */}
+            {/* {item.name === 'Services' && showDropdown && (
+              <ul class="dropup-content">
+                <li>AIXpertSites</li>
+                <li>Personal Software for Business</li>
+                <li>App Development</li>
+                <li>Web/App Upgradation</li>
+                <li>Web Development</li>
+                <li>AI/ML Projects</li>
+                <li>Cyber Security</li>
+              </ul>
+            )} */}
+
+          </li>
+        ))}
+      </ul>
+
+      {showPopup && <ComingSoonPopup closePopup={() => setShowPopup(false)} />}
+    </div>
   );
 };
 

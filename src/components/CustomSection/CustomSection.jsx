@@ -15,7 +15,7 @@ const CustomSection = () => {
                 </div>
 
                 <div className="customSectionImageContainer">
-                    <img src={customSectionImage} alt="customSolution" />
+                    <img src={customSectionImage} loading="lazy" alt="customSolution" />
                 </div>
             </div>
         </>
