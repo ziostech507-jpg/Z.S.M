@@ -9,7 +9,7 @@ const AnimationNumber = () => {
             <div className="stat-card">
                 <h5>Project Handled</h5>
                 <div className="stat-number">
-                    <CountUp end={10} enableScrollSpy />+
+                    <CountUp end={100} enableScrollSpy />+
                 </div>
             </div>
             <div className="divider"></div>

@@ -12,7 +12,8 @@ const ProjectCard = ({ obj }) => {
         <span className="projectInfo">
           <h1 className="projectCardName">{obj.title}</h1>
           <hr />
-          <div>         <p className="projectCardDescription">{obj.description}</p>
+          <div>        
+             <p className="projectCardDescription">{obj.description}</p>
           <div className='projectCardReadMoreButton'>
           <LetStartBtn buttonTitle="Read More" routePath='/projects' />
           </div>

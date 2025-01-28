@@ -1,5 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useNavigate } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -9,27 +10,34 @@ import projectimg2 from '../../assets/images/medicityHospital.jpg'
 import projectimg3 from '../../assets/images/sunrise.jpg'
 import projectimg4 from '../../assets/images/saurabh_visionary.jpg'
 import projectimg5 from '../../assets/images/avni.png'
+import { SlArrowRightCircle } from "react-icons/sl";
+
 
 import './ProjectSwiper.css';
 import ProjectCard from './ProjectCard';
+import ViewAllButton from '../ViewAllButton/ViewAllButton';
 
 function ProjectSwiper() {
+  const navigate=useNavigate()
   const projectObj1 = {
     imgSrc: projectimg1,
     title: "Ekta Janch Kendra",
-    description: "Ekta Janch Kendra is a healthcare-focused project that delivers reliable and accessible services. We created a user-friendly website with a profile management system and maintenance to ensure smooth operations and a seamless user experience."
+    // description: "Ekta Janch Kendra is a healthcare-focused project that delivers reliable and accessible services. We created a user-friendly website with a profile management system and maintenance to ensure smooth operations and a seamless user experience."
+    description:'Ekta Janch Kendra: Healthcare website with profile management, maintenance, and reliable services.',
   };
 
   const projectObj2 = {
     imgSrc: projectimg2,
     title: "Medicity Hospital, Unnao",
-    description: "Medicity Hospital, Unnao, uses our system to manage doctor profiles, patient data, and staff details. This efficient platform improves coordination, record accuracy, and patient services, helping streamline operations and elevate the healthcare experience."
+    // description: "Medicity Hospital, Unnao, uses our system to manage doctor profiles, patient data, and staff details. This efficient platform improves coordination, record accuracy, and patient services, helping streamline operations and elevate the healthcare experience."
+    description:"Medicity Hospital uses our system for efficient doctor, patient, and staff management.",
   };
 
   const projectObj3 = {
     imgSrc: projectimg3,
     title: "Sunrise Diagnostic Services",
-    description: "Sunrise Diagnostic Services benefits from a user-friendly website for booking and accessing services. We developed a secure profile management system and provide maintenance to ensure seamless performance and reliable patient information handling."
+    // description: "Sunrise Diagnostic Services benefits from a user-friendly website for booking and accessing services. We developed a secure profile management system and provide maintenance to ensure seamless performance and reliable patient information handling."
+    description:'Sunrise Diagnostics: Secure website for bookings, profile management, and reliable maintenance.',
   };
 
   const projectObj4 = {
@@ -78,8 +86,9 @@ function ProjectSwiper() {
           <SwiperSlide><ProjectCard obj={projectObj1} /></SwiperSlide>
           <SwiperSlide><ProjectCard obj={projectObj2} /></SwiperSlide>
           <SwiperSlide><ProjectCard obj={projectObj3} /></SwiperSlide>
-          <SwiperSlide><ProjectCard obj={projectObj4} /></SwiperSlide>
-          <SwiperSlide><ProjectCard obj={projectObj5} /></SwiperSlide>
+          {/* <SwiperSlide><ProjectCard obj={projectObj4} /></SwiperSlide>
+          <SwiperSlide><ProjectCard obj={projectObj5} /></SwiperSlide> */}
+          <SwiperSlide className='projectSwiperRightArrow' title='View All Projects' onClick={()=>navigate('/projects')}><ViewAllButton buttonTitle="View All Projects"/></SwiperSlide>
           <SwiperNavButtons /> {/* Custom navigation buttons */}
         </Swiper>
       </div>

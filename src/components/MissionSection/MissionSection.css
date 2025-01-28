@@ -24,7 +24,7 @@
     
     .mission {
         background-color: #121C20;
-        padding: 40px 20px;
+        padding: 70px 20px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -34,7 +34,7 @@
     
     .vision {
         background-color: #1A262C;
-        padding: 40px 20px;
+        padding: 70px 20px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -44,7 +44,7 @@
     
     .value {
         background-color: #243137;
-        padding: 40px 20px;
+        padding: 70px 20px;
         display: flex;
         justify-content: center;
         align-items: center;

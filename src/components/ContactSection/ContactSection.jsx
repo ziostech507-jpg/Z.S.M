@@ -53,13 +53,16 @@ const ContactSection = () => {
                             We'd love to hear about the project you're working on.</p>
                         <ul>
                             <li>
-                                <FontAwesomeIcon className='contact-icon' icon={faPhone} /> +91 7054464875
+                                <FontAwesomeIcon className='contact-icon' icon={faPhone} /> +91 9335141563
                             </li>
                             <li>
                                 <FontAwesomeIcon className='contact-icon' icon={faWhatsapp} /> +91 9335141563
                             </li>
                             <li>
                                 <FontAwesomeIcon className='contact-icon' icon={faEnvelope} /> ziostechsolutions@gmail.com
+                            </li>
+                            <li>
+                                <FontAwesomeIcon className='contact-icon' icon={faEnvelope} /> 	ceo.office@ziostechsolutions.com
                             </li>
                             <li>
                                 <FontAwesomeIcon className='contact-icon' icon={faLocationDot} /> Sudarshan Society Vinayakpur, Kanpur 208024.
