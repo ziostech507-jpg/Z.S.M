@@ -9,6 +9,7 @@
 .footer-logo {
     width: 214px;
     text-align: left;
+    cursor: pointer;
     /* margin-bottom: 20px; */
 }
 
@@ -139,15 +140,12 @@
     font-size: 40px;
     color: #FDF9FA;
     text-decoration: none;
-    cursor: none !important;
+    transition:all .1s linear;
 }
 
 .social-icons a:hover {
-    color: #ffffff;
-    cursor: none;
-}
-#linkedinIcon{
-    cursor: pointer !important;
+    color: wheat;
+    cursor: pointer;
 }
 
 
@@ -166,8 +164,22 @@
 }
 
 
-/* Responsive Design */
 
+.footer-industry ul{
+}
+.footer-industry ul li{
+    cursor:default;
+}
+.footer-industry ul li:hover{
+    color: #b7b7b7;
+}
+.footer-other-service ul li{
+    cursor:default;
+}
+.footer-other-service ul li:hover{
+    color: #b7b7b7;
+}
+/* Responsive Design */
 @media (max-width: 768px) {
     .footer {
         padding: 5px 25px;

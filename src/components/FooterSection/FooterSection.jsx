@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './FooterSection.css';
+import { useNavigate,useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faFacebook,
@@ -11,9 +12,20 @@ import {
 import logo from '../../assets/images/ziostech_logo-footer.png';
 
 const FooterSection = () => {
+    const navigate= useNavigate()
+    const location = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, [location.pathname]);
+    const handleRoute=(path)=>{
+        if (location.pathname === path) {
+            // Scroll to top if the same route is clicked
+            window.scrollTo(0, 0);
+          }
+    }
     return (
         <footer className="footer">
-            <img className="footer-logo" src={logo} alt="ZiosTech Logo" />
+            <img className="footer-logo" onClick={()=>handleRoute('/')} src={logo} alt="ZiosTech Logo" />
             <div className="footer-container">
                 {/* Footer Links */}
                 <div className="footer-links-container">
@@ -27,14 +39,14 @@ const FooterSection = () => {
                     <div className="footer-section">
                         <h3>Company</h3>
                         <ul id='footer-links'>
-                            <li>About Us</li>
-                            <li>Contact Us</li>
-                            <li>All Services</li>
-                            <li>Blogs</li>
-                            <li>Career</li>
+                            <li onClick={()=>navigate('/about')}>About Us</li>
+                            <li onClick={()=>navigate('/contact')}>Contact Us</li>
+                            <li onClick={()=>navigate('/services')}>All Services</li>
+                            {/* <li>Blogs</li>
+                            <li>Career</li> */}
                         </ul>
                     </div>
-                    <div className="footer-section">
+                    {/* <div className="footer-section">
                         <h3>Services</h3>
                         <ul id='footer-links'>
                             <li>Mobile App Development</li>
@@ -45,8 +57,8 @@ const FooterSection = () => {
                             <li>Technical Consulting Services</li>
                             <li>Business Intelligence Services</li>
                         </ul>
-                    </div>
-                    <div className="footer-section">
+                    </div> */}
+                    <div className="footer-section footer-industry">
                         <h3>Industries</h3>
                         <ul id='footer-links'>
                             <li>Health Care</li>
@@ -57,7 +69,7 @@ const FooterSection = () => {
                             <li>SaaS</li>
                         </ul>
                     </div>
-                    <div className="footer-section">
+                    <div className="footer-section footer-other-service">
                         <h3>Other Links</h3>
                         <ul id='footer-links'>
                             <li>Terms & Conditions</li>
@@ -72,30 +84,30 @@ const FooterSection = () => {
             {/* Divider and Social Icons */}
             <div className="footer-divider">
                 {/* Newsletter */}
-                <div className="footer-newsletter">
+                {/* <div className="footer-newsletter">
                     <h3>Subscribe to our Newsletter</h3>
                     <p>Join and stay informed about the latest trends.</p>
                     <div className="newsletter-input">
                         <input type="email" placeholder="Enter your email address"   disabled/>
                         <button style={{padding:'10px'}} disabled>Subscribe</button>
                     </div>
-                </div>
+                </div> */}
                 <div className="social-icons">
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    {/* <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faFacebook} />
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    </a> */}
+                    {/* <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faInstagram} />
-                    </a>
-                    <a href="https://www.linkedin.com/company/ziostechsolutions/posts/?feedView=all" target="_blank" rel="noopener noreferrer" id='linkedinIcon'>
+                    </a> */}
+                    <a href="https://www.linkedin.com/company/ziostechsolutions/posts/?feedView=all" target="_blank" rel="noopener noreferrer" >
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
-                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                    {/* <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faYoutube} />
-                    </a>
-                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                    </a> */}
+                    {/* <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faXTwitter} />
-                    </a>
+                    </a> */}
                 </div>
 
 

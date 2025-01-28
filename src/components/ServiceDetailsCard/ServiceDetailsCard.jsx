@@ -12,7 +12,6 @@ import webDevelopmentServiceImage from "../../assets/images/webDevelopmentServic
 import dataSercurityServiceImage from "../../assets/images/dataSercurityServiceImage.png";
 import AiMlServiceImage from "../../assets/images/AiMlServiceImage.png";
 
-
 const ServiceDetailsCard = () => {
   
   return (

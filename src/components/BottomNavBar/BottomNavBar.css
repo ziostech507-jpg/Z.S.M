@@ -65,31 +65,35 @@
 /* For screens smaller than 768px */
 @media (max-width: 768px) {
   .bottomNavBarItems {
-    gap: 40px; /* Reduce space between items */
+    gap: 50px; /* Reduce space between items */
   }
 
   .bottomNavBarItems li img {
-    width: 40px;
+    /* width: 40px; */
+    width: 50px;
     height: auto; /* Smaller icon size for mobile */
   }
 
   .bottomNavBarItems li p {
-    font-size: 13px; /* Smaller text on mobile */
+    /* font-size: 13px; Smaller text on mobile */
+    font-size: 17px;
   }
 }
 
 /* For screens smaller than 480px */
 @media (max-width: 480px) {
   .bottomNavBarItems {
-    gap: 20px; /* Further reduce space between items */
+    gap: 25px; /* Further reduce space between items */
   }
 
   .bottomNavBarItems li img {
-    width: 20px;
+    /* width: 20px; */
+    width: 28px;
     height: auto; /* Further reduce icon size */
   }
 
   .bottomNavBarItems li p {
-    font-size: 10px; /* Further reduce text size */
+    /* font-size: 10px; Further reduce text size */
+    font-size: 13px; 
   }
 }
