@@ -386,55 +386,66 @@
 
 // export default TopNavbar;
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ziostech_logo from "../../assets/images/ziostech_logo.png";
 import "./TopNavbar.css";
 import ContactUs from "../ContactUsButton/ContactUs";
 import { useNavigate } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
-// import { AiOutlinePlus } from "react-icons/ai";
 import { CiCirclePlus } from "react-icons/ci";
-
-
-import ServiceDropDown from "./ServiceDropDown"; // Import the popup component
+import ServiceDropDown from "./ServiceDropDown";
 
 const TopNavbar = () => {
   const navigate = useNavigate();
-  const [menuOpen, setMenuOpen] = useState(false); // Controls menu toggle
-  const [showServicesDropdown, setShowServicesDropdown] = useState(false); // Dropdown for small screens
-  const [showServicesPopup, setShowServicesPopup] = useState(false); // Popup for large screens
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [showServicesDropdown, setShowServicesDropdown] = useState(false);
+  const [showServicesPopup, setShowServicesPopup] = useState(false);
+
+  // References for menu and popup
+  const menuRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
-        setMenuOpen(false); // Close menu for large screens
-        setShowServicesDropdown(false); // Hide dropdown for large screens
+        setMenuOpen(false);
+        setShowServicesDropdown(false);
       }
     };
 
-    window.addEventListener("resize", handleResize); // Add resize listener
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+        setShowServicesDropdown(false);
+        setShowServicesPopup(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
-      window.removeEventListener("resize", handleResize); // Cleanup listener on unmount
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-    setShowServicesDropdown(false); // Close dropdown when toggling menu
+    setMenuOpen((prev) => !prev);
+    setShowServicesDropdown(false);
+    setShowServicesPopup(false);
   };
 
   const toggleServicesDropdown = () => {
-    setShowServicesDropdown(!showServicesDropdown); // Toggle small screen dropdown
+    setShowServicesDropdown((prev) => !prev);
   };
 
-  // Function to toggle Service Popup visibility
   const toggleServicesPopup = (e) => {
-    e.preventDefault(); // Prevent navigation on down arrow click
-    setShowServicesPopup(!showServicesPopup); // Toggle popup visibility
+    e.preventDefault();
+    setShowServicesPopup((prev) => !prev);
   };
 
   return (
-    <div className="topNavContainer">
+    <div className="topNavContainer" ref={menuRef}>
       {/* Logo */}
       <img
         className="ziostechLogo"
@@ -450,32 +461,30 @@ const TopNavbar = () => {
           {/* Services */}
           <li
             id="serviceTopNavLink"
-            onMouseEnter={() => !menuOpen && setShowServicesPopup(true)} // Show popup on hover (large screens)
-            onMouseLeave={() => setShowServicesPopup(false)} // Hide popup on mouse leave
+            onMouseEnter={() => !menuOpen && setShowServicesPopup(true)}
+            onMouseLeave={() => setShowServicesPopup(false)}
           >
             <div
               className="serviceItem"
-              onClick={() => {
-                navigate("/services");
-              }} // Redirect on click without closing the popup
+              onClick={() => navigate("/services")}
             >
               Services
             </div>
-            {/* Conditionally render down arrow or + icon based on menu state */}
             {menuOpen ? (
               <CiCirclePlus
                 className="serviceDropDownIcon servicePlusIcon"
                 onClick={(e) => {
-                  e.stopPropagation(); // Prevent closing the popup when clicking the + icon
-                  toggleServicesDropdown(); // Toggle dropdown on + icon click
+                  e.stopPropagation();
+                  toggleServicesDropdown();
                 }}
               />
             ) : (
               <RiArrowDropDownLine
-                className="serviceDropDownIcon" id="serviceDropDownIcon"
-                onMouseEnter={() => !menuOpen && setShowServicesPopup(true)} // Show popup on hover (large screens)
-                onMouseLeave={() => setShowServicesPopup(false)} // Hide popup on mouse leave
-                onClick={toggleServicesPopup} // Open popup on click without redirect
+                className="serviceDropDownIcon"
+                id="serviceDropDownIcon"
+                onMouseEnter={() => !menuOpen && setShowServicesPopup(true)}
+                onMouseLeave={() => setShowServicesPopup(false)}
+                onClick={toggleServicesPopup}
               />
             )}
           </li>
@@ -489,7 +498,7 @@ const TopNavbar = () => {
                   setMenuOpen(false);
                 }}
               >
-              AI/ML
+                AI/ML
               </li>
               <li
                 onClick={() => {
@@ -497,8 +506,7 @@ const TopNavbar = () => {
                   setMenuOpen(false);
                 }}
               >
-             AIXpertSites
-
+                AIXpertSites
               </li>
               <li
                 onClick={() => {
@@ -522,7 +530,7 @@ const TopNavbar = () => {
                   setMenuOpen(false);
                 }}
               >
-               App Development
+                App Development
               </li>
               <li
                 onClick={() => {
@@ -531,8 +539,6 @@ const TopNavbar = () => {
                 }}
               >
                 Web Development
-
-
               </li>
               <li
                 onClick={() => {
@@ -540,7 +546,7 @@ const TopNavbar = () => {
                   setMenuOpen(false);
                 }}
               >
-             Data security and protection
+                Data Security and Protection
               </li>
               <li
                 onClick={() => {
@@ -548,8 +554,7 @@ const TopNavbar = () => {
                   setMenuOpen(false);
                 }}
               >
-               Cyber Security
-
+                Cyber Security
               </li>
             </ul>
           )}
@@ -578,8 +583,8 @@ const TopNavbar = () => {
       {!menuOpen && showServicesPopup && (
         <div
           className="servicePopUpWrapper"
-          onMouseEnter={() => setShowServicesPopup(true)} // Keep popup open while hovering
-          onMouseLeave={() => setShowServicesPopup(false)} // Close popup on mouse leave
+          onMouseEnter={() => setShowServicesPopup(true)}
+          onMouseLeave={() => setShowServicesPopup(false)}
         >
           <ServiceDropDown />
         </div>
@@ -593,4 +598,4 @@ const TopNavbar = () => {
   );
 };
 
-export default TopNavbar;	
+export default TopNavbar;
