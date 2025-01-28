@@ -3,9 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import './ServiceDropDown.css'
 const ServicePopUp = () => {
     const navigate=useNavigate();
-    const handleClick=()=>{
-        navigate('/about')
-    }
   return (
     <div className='servicePopUpContainer'>
       <ul>
