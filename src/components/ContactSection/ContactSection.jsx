@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ContactSection.css';
 import ContactUsGif from '../../assets/images/ContactUs.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,8 +10,42 @@ import {
 import {
     faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons';
+import emailjs from "@emailjs/browser"
 
 const ContactSection = () => {
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [phone, setPhone] = useState("")
+    const [company, setComapany] = useState("")
+    const [message, setMessage] = useState("")
+    const templateParams = {
+        from_name: name,
+        from_email: email,
+        from_phone: phone,
+        from_company: company,
+        message: message,
+        to_email: "ziostechdirector2024@getDefaultNormalizer.com",
+        to_name: "Aditya Singh"
+    }
+    // console.log(templateParams)
+    const send = (e) => {
+        const YOUR_SERVICE_ID = 'service_5we1zyk'
+        const YOUR_TEMPLATE_ID = 'template_l9l7wun'
+        const YOUR_PUBLIC_KEY = '9BDVzqsf0PU_ak6WL'
+        e.preventDefault();
+
+        emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, templateParams, YOUR_PUBLIC_KEY)
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                }
+            );
+
+    };
+
     return (
         <div className="contact-us">
             <div className="container">
@@ -20,29 +54,53 @@ const ContactSection = () => {
                     <div className="col left-column">
                         <h2>Let's Start a Project</h2>
                         <p>Our team is ready to collaborate and create something extraordinary together. Contact us now!</p>
-                        <form>
+                        <form onSubmit={send}>
                             <div className="form-group">
                                 <label htmlFor="fullName">Full Name</label>
-                                <input type="text" id="fullName" />
+                                <input type="text" id="fullName" name="from_name" onChange={(e) => setName(e.target.value)} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="email">Email Address</label>
-                                <input type="email" id="email" />
+                                <input type="email" id="email" name="from_email" onChange={(e) => setEmail(e.target.value)} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="phone">Phone Number</label>
-                                <input type="tel" id="phone" />
+                                <input type="tel" id="phone" name="from_phone" onChange={(e) => setPhone(e.target.value)} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="company">Company Name</label>
-                                <input type="text" id="company" />
+                                <input type="text" id="company" name="from_company" onChange={(e) => setComapany(e.target.value)} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="projectDescription">Short Description of Your Project</label>
-                                <textarea id="projectDescription" rows="4"></textarea>
+                                <textarea id="projectDescription" rows="4" name="message" onChange={(e) => setMessage(e.target.value)}></textarea>
+                            </div>
+                            <button type="submit" className="submit-btn" value="Send">Submit</button>
+                        </form>
+                        {/* <form onSubmit={send}>
+                            <div className="form-group">
+                                <label htmlFor="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="from_name" required />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="email">Email Address</label>
+                                <input type="email" id="email" name="from_email" required />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="from_phone" required />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="company">Company Name</label>
+                                <input type="text" id="company" name="from_company" />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="projectDescription">Short Description of Your Project</label>
+                                <textarea id="projectDescription" rows="4" name="message" required></textarea>
                             </div>
                             <button type="submit" className="submit-btn">Submit</button>
-                        </form>
+                        </form> */}
+
                     </div>
 
                     {/* Right Column */}
@@ -58,9 +116,9 @@ const ContactSection = () => {
                             <li>
                                 <FontAwesomeIcon className='contact-icon' icon={faWhatsapp} /> +91 9335141563
                             </li>
-                            <li>
+                            {/* <li>
                                 <FontAwesomeIcon className='contact-icon' icon={faEnvelope} /> ziostechsolutions@gmail.com
-                            </li>
+                            </li> */}
                             <li>
                                 <FontAwesomeIcon className='contact-icon' icon={faEnvelope} /> 	ceo.office@ziostechsolutions.com
                             </li>
