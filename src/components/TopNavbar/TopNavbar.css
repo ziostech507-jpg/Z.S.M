@@ -242,6 +242,6 @@ font-size:40px;
   .ziostechLogo {
     width: 170px; /* Resize further for very small screens */
     height: auto; /* Adjust height */
-    margin-right:12px;
+    margin-left:-10px;
   }
 }
