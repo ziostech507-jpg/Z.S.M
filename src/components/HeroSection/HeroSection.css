@@ -9,6 +9,7 @@
     /* justify-content: space-between; */
     justify-content: center;
     flex-wrap: nowrap; /* Ensure no wrapping happens */
+    margin-top:100px;
 }
 
 .heroSectionContentContainer {

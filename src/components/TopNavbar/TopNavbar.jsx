@@ -394,6 +394,9 @@ import { useNavigate } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { CiCirclePlus } from "react-icons/ci";
 import ServiceDropDown from "./ServiceDropDown";
+// import { AiOutlineCloseCircle } from "react-icons/ai"; // Importing Close Circle Icon
+import { RxCross2 } from "react-icons/rx";
+import { HiMiniBars3CenterLeft } from "react-icons/hi2";
 
 const TopNavbar = () => {
   const navigate = useNavigate();
@@ -405,6 +408,7 @@ const TopNavbar = () => {
   const menuRef = useRef(null);
 
   useEffect(() => {
+    // let lastScrollY = window.scrollY;
     const handleResize = () => {
       if (window.innerWidth > 768) {
         setMenuOpen(false);
@@ -420,12 +424,26 @@ const TopNavbar = () => {
       }
     };
 
+    // const handleScroll = () => {
+    //   setMenuOpen(false);
+    //   setShowServicesPopup(false);
+    // };
+    // const handleScroll = () => {
+    //   const currentScrollY = window.scrollY;
+    //   if (Math.abs(currentScrollY - lastScrollY) > 2000) { // Close only after scrolling 50px
+    //     setMenuOpen(false);
+    //     setShowServicesPopup(false);
+    //   }
+    //   lastScrollY = currentScrollY;
+    // };
     window.addEventListener("resize", handleResize);
     document.addEventListener("mousedown", handleClickOutside);
+    // window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("resize", handleResize);
       document.removeEventListener("mousedown", handleClickOutside);
+      // window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -464,10 +482,7 @@ const TopNavbar = () => {
             onMouseEnter={() => !menuOpen && setShowServicesPopup(true)}
             onMouseLeave={() => setShowServicesPopup(false)}
           >
-            <div
-              className="serviceItem"
-              onClick={() => navigate("/services")}
-            >
+            <div className="serviceItem" onClick={() => navigate("/services")}>
               Services
             </div>
             {menuOpen ? (
@@ -492,6 +507,7 @@ const TopNavbar = () => {
           {/* Small screen dropdown */}
           {menuOpen && showServicesDropdown && (
             <ul className="servicesDropdownMenu">
+            
               <li
                 onClick={() => {
                   navigate("/ai-ml-projects");
@@ -591,8 +607,23 @@ const TopNavbar = () => {
       )}
 
       {/* Menu Toggle Button */}
-      <button className="menuToggleButton" onClick={toggleMenu}>
+      {/* <button className="menuToggleButton" onClick={toggleMenu}>
         ☰
+      </button> */}
+      <button
+      //  className="menuToggleButton" onClick={toggleMenu}
+      className={`menuToggleButton ${menuOpen ? "rotate" : ""}`}
+      onClick={toggleMenu}
+       >
+        {menuOpen ? (
+          <RxCross2 
+          // className="closeMenuIcon"
+          className={`closeMenuIcon ${menuOpen ? "fade" : ""}`}
+           />
+        ) : (
+          // "☰"
+          <HiMiniBars3CenterLeft />
+        )}
       </button>
     </div>
   );
