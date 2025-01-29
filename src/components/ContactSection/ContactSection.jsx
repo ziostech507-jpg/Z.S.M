@@ -58,9 +58,9 @@ const ContactSection = () => {
                             <li>
                                 <FontAwesomeIcon className='contact-icon' icon={faWhatsapp} /> +91 9335141563
                             </li>
-                            <li>
+                            {/* <li>
                                 <FontAwesomeIcon className='contact-icon' icon={faEnvelope} /> ziostechsolutions@gmail.com
-                            </li>
+                            </li> */}
                             <li>
                                 <FontAwesomeIcon className='contact-icon' icon={faEnvelope} /> 	ceo.office@ziostechsolutions.com
                             </li>
