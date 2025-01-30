@@ -74,6 +74,13 @@ const ContactSection = () => {
                             <div className="location-section">
                                 <h2 id="location-heading">Our Locations</h2>
                                 <div className="location-cards">
+                                    {/* Location 2 */}
+                                    <div className="location-card">
+                                        <FontAwesomeIcon className="location-icon" icon={faLocationDot} /> Australia Office
+                                        <div className="location-details">
+                                            <p> Dennis Street, Clayton, Victoria 3168</p>
+                                        </div>
+                                    </div>
                                     {/* Location 1 */}
                                     <div className="location-card">
                                         <FontAwesomeIcon className="location-icon" icon={faLocationDot} /> India Office
@@ -83,13 +90,7 @@ const ContactSection = () => {
                                         </div>
                                     </div>
 
-                                    {/* Location 2 */}
-                                    <div className="location-card">
-                                        <FontAwesomeIcon className="location-icon" icon={faLocationDot} /> Australia Office
-                                        <div className="location-details">
-                                            <p> Dennis Street, Clayton, Victoria 3168</p>
-                                        </div>
-                                    </div>
+
                                 </div>
 
                             </div>
