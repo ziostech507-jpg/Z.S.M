@@ -65,7 +65,8 @@ const ContactSection = () => {
                                 <FontAwesomeIcon className='contact-icon' icon={faEnvelope} /> 	ceo.office@ziostechsolutions.com
                             </li>
                             <li>
-                                <FontAwesomeIcon className='contact-icon' icon={faLocationDot} /> Sudarshan Society Vinayakpur, Kanpur 208024.
+                                <FontAwesomeIcon className='contact-icon' icon={faLocationDot} /> H 2203, Tower-H, Ajnara Lee Garden, Greater Noida West, Sector 16-B
+                                201301
                             </li>
                         </ul>
                     </div>
