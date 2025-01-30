@@ -64,10 +64,36 @@ const ContactSection = () => {
                             <li>
                                 <FontAwesomeIcon className='contact-icon' icon={faEnvelope} /> 	ceo.office@ziostechsolutions.com
                             </li>
-                            <li>
+                            {/* <li>
                                 <FontAwesomeIcon className='contact-icon' icon={faLocationDot} /> H 2203, Tower-H, Ajnara Lee Garden, Greater Noida West, Sector 16-B
                                 201301
                             </li>
+                            <li>
+                                <FontAwesomeIcon className='contact-icon' icon={faLocationDot} /> Dennis Street, Clayton, Victoria 3168
+                            </li> */}
+                            <div className="location-section">
+                                <h2 id="location-heading">Our Locations</h2>
+                                <div className="location-cards">
+                                    {/* Location 1 */}
+                                    <div className="location-card">
+                                        <FontAwesomeIcon className="location-icon" icon={faLocationDot} /> India Office
+                                        <div className="location-details">
+
+                                            <p> H 2203, Tower-H, Ajnara Lee Garden, Greater Noida West, Sector 16-B, 201301</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Location 2 */}
+                                    <div className="location-card">
+                                        <FontAwesomeIcon className="location-icon" icon={faLocationDot} /> Australia Office
+                                        <div className="location-details">
+                                            <p> Dennis Street, Clayton, Victoria 3168</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
                         </ul>
                     </div>
                 </div>
