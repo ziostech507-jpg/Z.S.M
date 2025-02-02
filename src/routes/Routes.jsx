@@ -14,21 +14,28 @@ import ServiceSwiper from '../components/ServiceCard/ServiceCardSwiper'
 
 import AiMlProjectsPage from '../pages/ServiceDropDown/AiMlProjectsPage'
 
-import AiXpertSitesPage from '../pages/ServiceDropDown/AiXpertSitesPage'
-import AppDevelopmentPage from '../pages/ServiceDropDown/AppDevelopmentPage'
-import CyberSecurityPage from '../pages/ServiceDropDown/CyberSecurityPage'
-import DataSecurityPage from '../pages/ServiceDropDown/DataSecurityPage'
-import PersonalSoftwarePage from '../pages/ServiceDropDown/PersonalSoftwarePage'
-import WebAppUpgradationPage from '../pages/ServiceDropDown/WebAppUpgradationPage'
-import WebDevelopmentPage from '../pages/ServiceDropDown/WebDevelopmentPage'
-import ServicePopUp from "../components/TopNavbar/ServiceDropDown"
+  import AiXpertSitesPage from '../pages/ServiceDropDown/AiXpertSitesPage'
+  import AppDevelopmentPage from '../pages/ServiceDropDown/AppDevelopmentPage'
+  import CyberSecurityPage from '../pages/ServiceDropDown/CyberSecurityPage'
+  import DataSecurityPage from '../pages/ServiceDropDown/DataSecurityPage'
+  import PersonalSoftwarePage from '../pages/ServiceDropDown/PersonalSoftwarePage'
+  import WebAppUpgradationPage from '../pages/ServiceDropDown/WebAppUpgradationPage'
+  import WebDevelopmentPage from '../pages/ServiceDropDown/WebDevelopmentPage'
 
-const routes = () => {
-  function ScrollToTop() {
-    const { pathname } = useLocation();
+  import TestingPage from '../pages/ServiceDropDown/TestingPage'
+import CloudsPage from '../pages/ServiceDropDown/CloudsPage'
+import ContainerisationPage from '../pages/ServiceDropDown/ContainerisationPage'
+import UIUXPage from '../pages/ServiceDropDown/UIUXPage'
+import BigData from '../pages/ServiceDropDown/BigDataPage'
+import DataVisualization from '../pages/ServiceDropDown/DataVisualizationPage'
+import DataOps from '../pages/ServiceDropDown/DataOpsPage'
+import SmartBots from '../pages/ServiceDropDown/SmartBotPage'
+  const routes = () => {
+    function ScrollToTop() {
+      const { pathname } = useLocation();
 
-    useEffect(() => {
-      window.scrollTo(0, 0);
+      useEffect(() => {
+        window.scrollTo(0, 0);
     }, [pathname]);
 
     return null;
@@ -61,7 +68,15 @@ const routes = () => {
         <Route path='/web-app-upgradation' element={<WebAppUpgradationPage />} />
         <Route path='/web-developement' element={<WebDevelopmentPage />} />
 
-        {/* <Route path="/servicePopUp" element={<ServicePopUp />} /> */}
+        <Route path='/clouds' element={<CloudsPage/>} />
+        <Route path='/testing' element={<TestingPage/>} />
+        <Route path='/containerization' element={<ContainerisationPage/>} />
+        <Route path='/uiux' element={<UIUXPage/>} />
+        <Route path='/big-data' element={<BigData/>} />
+        <Route path='/data-visualisation' element={<DataVisualization/>} />
+        <Route path='/dataOps' element={<DataOps/>} />
+        <Route path='/smart-bot' element={<SmartBots/>} />
+
 
       </Routes>
     </Router>

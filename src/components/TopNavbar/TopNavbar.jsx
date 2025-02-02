@@ -510,35 +510,43 @@ const TopNavbar = () => {
             
               <li
                 onClick={() => {
-                  navigate("/ai-ml-projects");
+                  navigate("/clouds");
                   setMenuOpen(false);
                 }}
               >
-                AI/ML
+               Clouds Services
               </li>
               <li
                 onClick={() => {
-                  navigate("/aixpersites");
+                  navigate("/testing");
                   setMenuOpen(false);
                 }}
               >
-                AIXpertSites
+                Testing Services
               </li>
               <li
                 onClick={() => {
-                  navigate("/personal-software");
+                  navigate("/containerization");
                   setMenuOpen(false);
                 }}
               >
-                Personal Software for Business
+               Containerisation Tools
               </li>
               <li
                 onClick={() => {
-                  navigate("/web-app-upgradation");
+                  navigate("/uiux");
                   setMenuOpen(false);
                 }}
               >
-                Web/App Upgradation
+             UIUX Services
+              </li>
+              <li
+                onClick={() => {
+                  navigate("/big-data");
+                  setMenuOpen(false);
+                }}
+              >
+                Big Data
               </li>
               <li
                 onClick={() => {
@@ -558,19 +566,19 @@ const TopNavbar = () => {
               </li>
               <li
                 onClick={() => {
-                  navigate("/data-security");
+                  navigate("/data-visualisation");
                   setMenuOpen(false);
                 }}
               >
-                Data Security and Protection
+                Data Visualisation
               </li>
               <li
                 onClick={() => {
-                  navigate("/cyber-security");
+                  navigate("/smart-bot");
                   setMenuOpen(false);
                 }}
               >
-                Cyber Security
+               Smart Bot
               </li>
             </ul>
           )}
@@ -590,6 +598,7 @@ const TopNavbar = () => {
               setMenuOpen(false);
             }}
           >
+        
             <ContactUs buttonTitle="Contact Us" className="contact-Us-btn" />
           </li>
         </ul>

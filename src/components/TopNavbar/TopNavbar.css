@@ -33,7 +33,7 @@ font-size:40px;
   /* background-color:#010a15; */
   border-radius: 20px;
   padding:0px 10px !important;
-  height:350px;
+  height:auto;
 }
 .servicesDropdownMenu li {
   /* list-style-type:circle !important; */
@@ -242,6 +242,6 @@ font-size:40px;
   .ziostechLogo {
     width: 170px; /* Resize further for very small screens */
     height: auto; /* Adjust height */
-    margin-right:12px;
+    margin-left:-15px;
   }
 }

@@ -6,11 +6,11 @@ const ServicePopUp = () => {
   return (
     <div className='servicePopUpContainer'>
       <ul>
-      <li onClick={()=>navigate('/ai-ml-projects')}> AI/ML</li>
-        <li  onClick={()=>navigate('/aixpersites')}>AIXpertSites
+      <li onClick={()=>navigate('/clouds')}>Clouds Services</li>
+        <li  onClick={()=>navigate('/testing')}>Testing Services
         </li>
-        <li  onClick={()=>navigate('/personal-software')}>Personal Software for Business</li>
-        <li  onClick={()=>navigate('/web-app-upgradation')}>Web/App Upgradation
+        <li  onClick={()=>navigate('/containerization')}>Containerisation Tools</li>
+        <li  onClick={()=>navigate('/uiux')}>UIUX Services
 </li>
         <li  onClick={()=>navigate('/app-developement')}>App Development
 
@@ -18,9 +18,13 @@ const ServicePopUp = () => {
         <li  onClick={()=>navigate('/web-developement')}>Web Development
 
 </li>
-        <li  onClick={()=>navigate('/cyber-security')}>Cyber Security
+        <li  onClick={()=>navigate('/big-data')}>Big Data
 </li>
-        <li  onClick={()=>navigate('/data-security')}>Data Security
+        <li  onClick={()=>navigate('/data-visualisation')}>Data Visualisation
+</li>
+        <li  onClick={()=>navigate('/dataOps')}>DataOps
+</li>
+        <li  onClick={()=>navigate('/smart-bot')}>Smart Bot
 </li>
         </ul>
     </div>
