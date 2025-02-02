@@ -13,7 +13,7 @@ const Development = () => {
                 </h1> */}
                 <div className="ServiceCardDescriptionContainer">
                     <div className='ServiceCardSubDescriptionContainer'>
-                        <p>  <span className="servicesubHeadingTitle">App Development: </span>
+                        <p>  <span className="servicesubHeadingTitle">Web Development: </span>
                             Web development involves creating and managing websites and applications for seamless user experiences. It includes front-end interfaces, back-end logic, and databases. Technologies like React, Node.js, and Python enable scalable solutions, ensuring security, performance, and digital transformation for businesses.
                         </p>
                         <p> <span className="servicesubHeadingTitle">Android Development: </span>
