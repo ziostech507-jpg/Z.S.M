@@ -211,6 +211,9 @@
         font-size: 20px;
         color: #eeeeee;
     }
+    .right-column h2 {
+        color: #fff;
+    }
 }
 
 @media (max-width: 480px) {
@@ -232,5 +235,27 @@
     }
     .contact-us ul {
         gap: 10px
+    }
+}
+
+
+/* location customize */
+
+.location-card {
+    color: rgb(189, 187, 187)
+}
+
+.location-details p {
+    color: white
+}
+
+#location-heading {
+    font-size: 24px;
+}
+
+@media (max-width: 480px) {
+    #location-heading {
+        font-size: 1.5rem;
+        color: #ffffff;
     }
 }

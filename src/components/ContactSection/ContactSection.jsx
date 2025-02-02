@@ -29,20 +29,20 @@ const ContactSection = () => {
     }
     // console.log(templateParams)
     const send = (e) => {
-        const YOUR_SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID
-        const YOUR_TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID
-        const YOUR_PUBLIC_KEY = process.env.REACT_APP_YOUR_PUBLIC_KEY
+        // const YOUR_SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID
+        // const YOUR_TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID
+        // const YOUR_PUBLIC_KEY = process.env.REACT_APP_YOUR_PUBLIC_KEY
         e.preventDefault();
 
-        emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, templateParams, YOUR_PUBLIC_KEY)
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                }
-            );
+        // emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, templateParams, YOUR_PUBLIC_KEY)
+        //     .then(
+        //         () => {
+        //             console.log('SUCCESS!');
+        //         },
+        //         (error) => {
+        //             console.log('FAILED...', error.text);
+        //         }
+        //     );
 
     };
 
@@ -123,7 +123,11 @@ const ContactSection = () => {
                                 <FontAwesomeIcon className='contact-icon' icon={faEnvelope} /> 	ceo.office@ziostechsolutions.com
                             </li>
                             {/* <li>
-                                <FontAwesomeIcon className='contact-icon' icon={faLocationDot} /> Sudarshan Society Vinayakpur, Kanpur 208024.
+                                <FontAwesomeIcon className='contact-icon' icon={faLocationDot} /> H 2203, Tower-H, Ajnara Lee Garden, Greater Noida West, Sector 16-B
+                                201301
+                            </li>
+                            <li>
+                                <FontAwesomeIcon className='contact-icon' icon={faLocationDot} /> Dennis Street, Clayton, Victoria 3168
                             </li> */}
                             <div className="location-section">
                                 <h2 id="location-heading">Our Locations</h2>
@@ -148,6 +152,7 @@ const ContactSection = () => {
                                 </div>
 
                             </div>
+
                         </ul>
                     </div>
                 </div>
