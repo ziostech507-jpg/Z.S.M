@@ -1,15 +1,16 @@
 import React from 'react'
 import TopNavbar from '../../components/TopNavbar/TopNavbar'
-import AppDevelopment from '../../components/ServiceDetailsCard/AppDevelopment'
+// import AppDevelopment from '../../components/ServiceDetailsCard/AppDevelopment'
 import ContactSection from '../../components/ContactSection/ContactSection'
 import FooterSection from '../../components/FooterSection/FooterSection'
 import AppDevelopmentServiceImage from "../../assets/images/AppDevelopmentServiceImage.png";
 import HeroSection from '../../components/HeroSection/HeroSection';
+import Development from '../../components/ServiceDetailsCard/Development'
 const AppDevelopmentPage = () => {
     const heroSectionContent = {
-        paragraph: 'Revolutionize user experiences with cutting-edge mobile and web applications tailored to your business needs. Transform ideas into reality with seamless app development.',
+        paragraph: 'Empower your business with top-notch development solutions, including web and mobile applications. Build seamless digital experiences with modern technologies.',
         normalHeading: 'Grow Your Business With ',
-        coloredHeading: 'App Development',
+        coloredHeading: 'Development',
         image: AppDevelopmentServiceImage
     };
     return (
@@ -24,7 +25,7 @@ const AppDevelopmentPage = () => {
                 buttonTitle='Get In Touch'
                 showButton={true}
             />
-            <AppDevelopment />
+            <Development />
             <ContactSection />
             <FooterSection />
         </div>

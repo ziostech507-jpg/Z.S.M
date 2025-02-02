@@ -13,6 +13,7 @@ import Liam from '../../assets/images/Liam.png'
 import Sofia from '../../assets/images/Sofia.png'
 import Raj from '../../assets/images/RajPatel.png'
 import Hannah from '../../assets/images/Hannah.png'
+import aakriti from '../../assets/images/aakriti.png'
 const Testimonials = () => {
 
   const data = [
@@ -95,6 +96,12 @@ const Testimonials = () => {
       testimonialPosition: "Head of Development (Muller Tech)",
       aboutTestimonial:
         "Ziostech's professional approach and innovative solutions significantly advanced our development projects. Their team's dedication is impressive.",
+    },
+    {
+      img: aakriti,
+      testimonialName: "Aakriti",
+      testimonialPosition: "CEO (RedZet)",
+      aboutTestimonial: "Ziostech Solutions played a pivotal role in our digital transformation. Their strategic approach, technical expertise, and commitment to excellence resulted in a robust and scalable platform."
     },
   ];
 

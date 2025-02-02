@@ -3,9 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import './ServiceDropDown.css'
 const ServicePopUp = () => {
         const navigate = useNavigate();
-        const handleClick = () => {
-                navigate('/about')
-        }
         return (
                 <div className='servicePopUpContainer'>
                         <ul>
@@ -15,15 +12,22 @@ const ServicePopUp = () => {
                                 <li onClick={() => navigate('/personal-software')}>Personal Software for Business</li>
                                 <li onClick={() => navigate('/web-app-upgradation')}>Web/App Upgradation
                                 </li>
-                                <li onClick={() => navigate('/app-developement')}>App Development
+                                <li onClick={() => navigate('/developement')}>Development
 
                                 </li>
-                                <li onClick={() => navigate('/web-developement')}>Web Development
+                                {/* <li onClick={() => navigate('/web-developement')}>Web Development
 
-                                </li>
+                                </li> */}
                                 <li onClick={() => navigate('/cyber-security')}>Cyber Security
                                 </li>
                                 <li onClick={() => navigate('/data-security')}>Data Security
+                                </li>
+                                <li onClick={() => navigate('/platform-services')}>
+                                        Platform Services
+                                </li>
+                                <li onClick={() => navigate('/cms-ecommerce')}>
+                                        CMS and E-commerce platforms:
+
                                 </li>
                         </ul>
                 </div>

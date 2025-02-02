@@ -23,21 +23,7 @@ const ServiceDetailsCard = () => {
         </h1>
         <div className="ServiceCardDescriptionContainer">
           <p>
-            AIExpertSites services in IT refer to specialized platforms or
-            services that provide expert knowledge, tools, and solutions in the
-            realm of Artificial Intelligence (AI). These services typically offer
-            consultancy to help businesses understand and implement AI
-            technologies effectively. They also provide custom AI solutions such
-            as machine learning models, natural language processing systems, or
-            AI-driven analytics tailored to meet specific business needs.
-            Additionally, AIExpertSites often grant access to AI tools, software,
-            or platforms that enable companies to develop, deploy, and scale AI
-            applications seamlessly. Alongside development services, they may also
-            offer research resources, case studies, and educational materials to
-            deepen understanding of AI. Ultimately, AIExpertSites services guide
-            businesses in adopting AI, ensuring smooth integration with existing
-            systems and aligning AI solutions with overall business goals, helping
-            companies stay competitive in an AI-driven marketplace.
+            AIExpertSites services in IT refer to specialized platforms or services that provide expert knowledge, tools, and solutions in the realm of Artificial Intelligence(AI). These services typically offer consultancy to help businesses understand and implement AI technologies effectively. They also provide custom AI solutions such as machine learning models, natural language processing systems, or AI-driven analytics tailored to meet specific business needs. Additionally, AIExpertSites often grant access to AI tools, software, or platforms that enable companies to develop, deploy, and scale AI applications seamlessly. Alongside development services, they may also offer research resources, case studies, and educational materials to deepen understanding of AI. Ultimately, AIExpertSites services guide businesses in adopting AI, ensuring smooth integration with existing systems and aligning AI solutions with overall business goals, helping companies stay competitive in an AI-driven marketplace.
           </p>
           <div>
             <img src={aiServiceImage} alt="" />

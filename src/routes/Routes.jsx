@@ -15,13 +15,16 @@ import ServiceSwiper from '../components/ServiceCard/ServiceCardSwiper'
 import AiMlProjectsPage from '../pages/ServiceDropDown/AiMlProjectsPage'
 
 import AiXpertSitesPage from '../pages/ServiceDropDown/AiXpertSitesPage'
-import AppDevelopmentPage from '../pages/ServiceDropDown/AppDevelopmentPage'
+
 import CyberSecurityPage from '../pages/ServiceDropDown/CyberSecurityPage'
 import DataSecurityPage from '../pages/ServiceDropDown/DataSecurityPage'
 import PersonalSoftwarePage from '../pages/ServiceDropDown/PersonalSoftwarePage'
 import WebAppUpgradationPage from '../pages/ServiceDropDown/WebAppUpgradationPage'
 import WebDevelopmentPage from '../pages/ServiceDropDown/WebDevelopmentPage'
 import ServicePopUp from "../components/TopNavbar/ServiceDropDown"
+import DevelopmentPage from '../pages/ServiceDropDown/DevelopmentPage'
+import PlatformServicesPage from '../pages/ServiceDropDown/PlatformServicesPage'
+import CmsEcommercePage from '../pages/ServiceDropDown/CmsEcommercePage'
 
 const routes = () => {
   function ScrollToTop() {
@@ -54,7 +57,8 @@ const routes = () => {
         {/* allservices */}
         <Route path="/ai-ml-projects" element={<AiMlProjectsPage />} />
         <Route path='/aixpersites' element={<AiXpertSitesPage />} />
-        <Route path='/app-developement' element={<AppDevelopmentPage />} />
+
+        <Route path='/developement' element={<DevelopmentPage />} />
         <Route path="/cyber-security" element={<CyberSecurityPage />} />
         <Route path="/data-security" element={<DataSecurityPage />} />
         <Route path='/personal-software' element={<PersonalSoftwarePage />} />
@@ -62,6 +66,8 @@ const routes = () => {
         <Route path='/web-developement' element={<WebDevelopmentPage />} />
 
         {/* <Route path="/servicePopUp" element={<ServicePopUp />} /> */}
+        <Route path='/platform-services' element={<PlatformServicesPage />} />
+        <Route path='/cms-ecommerce' element={<CmsEcommercePage />} />
 
       </Routes>
     </Router>
