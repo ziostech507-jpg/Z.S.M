@@ -507,70 +507,88 @@ const TopNavbar = () => {
           {/* Small screen dropdown */}
           {menuOpen && showServicesDropdown && (
             <ul className="servicesDropdownMenu">
-            
+
               <li
                 onClick={() => {
-                  navigate("/ai-ml-projects");
+                  navigate("/platform-services");
                   setMenuOpen(false);
                 }}
               >
-                AI/ML
+               Platform Services
               </li>
               <li
                 onClick={() => {
-                  navigate("/aixpersites");
+                  navigate("/developement");
                   setMenuOpen(false);
                 }}
               >
-                AIXpertSites
+                Development
               </li>
               <li
                 onClick={() => {
-                  navigate("/personal-software");
+                  navigate("/cms-ecommerce");
                   setMenuOpen(false);
                 }}
               >
-                Personal Software for Business
+               CMS E-commerce
               </li>
               <li
                 onClick={() => {
-                  navigate("/web-app-upgradation");
+                  navigate("/clouds");
                   setMenuOpen(false);
                 }}
               >
-                Web/App Upgradation
+               Clouds Services
               </li>
               <li
                 onClick={() => {
-                  navigate("/app-developement");
+                  navigate("/testing");
                   setMenuOpen(false);
                 }}
               >
-                App Development
+                Testing Services
               </li>
               <li
                 onClick={() => {
-                  navigate("/web-developement");
+                  navigate("/containerization");
                   setMenuOpen(false);
                 }}
               >
-                Web Development
+               Containerisation Tools
               </li>
               <li
                 onClick={() => {
-                  navigate("/data-security");
+                  navigate("/uiux");
                   setMenuOpen(false);
                 }}
               >
-                Data Security and Protection
+             UIUX Services
               </li>
               <li
                 onClick={() => {
-                  navigate("/cyber-security");
+                  navigate("/big-data");
                   setMenuOpen(false);
                 }}
               >
-                Cyber Security
+                Big Data
+              </li>
+             
+             
+              <li
+                onClick={() => {
+                  navigate("/data-visualisation");
+                  setMenuOpen(false);
+                }}
+              >
+                Data Visualisation
+              </li>
+              <li
+                onClick={() => {
+                  navigate("/smart-bot");
+                  setMenuOpen(false);
+                }}
+              >
+               AI Integration
               </li>
             </ul>
           )}
@@ -590,6 +608,7 @@ const TopNavbar = () => {
               setMenuOpen(false);
             }}
           >
+        
             <ContactUs buttonTitle="Contact Us" className="contact-Us-btn" />
           </li>
         </ul>
@@ -611,15 +630,15 @@ const TopNavbar = () => {
         ☰
       </button> */}
       <button
-      //  className="menuToggleButton" onClick={toggleMenu}
-      className={`menuToggleButton ${menuOpen ? "rotate" : ""}`}
-      onClick={toggleMenu}
-       >
+        //  className="menuToggleButton" onClick={toggleMenu}
+        className={`menuToggleButton ${menuOpen ? "rotate" : ""}`}
+        onClick={toggleMenu}
+      >
         {menuOpen ? (
-          <RxCross2 
-          // className="closeMenuIcon"
-          className={`closeMenuIcon ${menuOpen ? "fade" : ""}`}
-           />
+          <RxCross2
+            // className="closeMenuIcon"
+            className={`closeMenuIcon ${menuOpen ? "fade" : ""}`}
+          />
         ) : (
           // "☰"
           <HiMiniBars3CenterLeft />
