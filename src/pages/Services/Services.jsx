@@ -25,6 +25,10 @@ import appDevelopmentServiceCardIcon from '../../assets/Icons/appDevelopmentServ
 import webDevelopmentServiceCardIcon from '../../assets/Icons/webDevelopmentServiceCardIcon.png'
 import dataSercurityServiceCardIcon from '../../assets/Icons/dataSercurityServiceCardIcon.png'
 import cyberSecurityServiceCardIcon from '../../assets/Icons/cyberSecurityServiceCardIcon.png';
+import bigDataImage from '../../assets/images/bigData.png'
+import testingImage from '../../assets/images/testingImage.png'
+import cmsEcommerceImage from '../../assets/images/cms-ecommerce.png'
+import ContainerisationImage from '../../assets/images/containerisation.png'
 const Services = () => {
     const heroSectionContent={
         paragraph:'Services for business refer to a range of technology-related solutions provided to support and enhance your business operations.',
@@ -35,51 +39,69 @@ const Services = () => {
     const serviceCardData =[
       {
           img:AiMLServiceCardImage, 
-          serviceTitle:'AI/ML Projects',
-          serviceDescription:'Forefront of technology, innovation across industries by more intelligent and automated solutions.',
+          serviceTitle: 'Platform Services',
+          serviceDescription: 'Platform services offer tools and infrastructure for efficient application development and management.',
           serviceIcon:aiMlServiceIcon,
           
       },
       {
           img:AiXpertSitesCardimage,
-          serviceTitle:'AIXpertSites',
-          serviceDescription:'A blend of "AI" and "Expert," emphasizing your expertise in creating AI-powered websites.',
+          serviceTitle: 'Cloud Services',
+      serviceDescription: 'Cloud services provide scalable, on-demand computing resources for businesses and applications.',
           serviceIcon:AiXpertsiteServiceIcon,
       },
       {
           img:personalSoftwareServiceCardImage,
-          serviceTitle:'Personal Software for Business',
-          serviceDescription:'To streamline workflows, improve productivity, and make it easier to organize and automate routine tasks. ',
+          serviceTitle: 'Data Visualisation',
+          serviceDescription: 'Data visualization transforms data into visual formats for easy analysis and interpretation.',
           serviceIcon:personalSoftwareServiceCardIcon,
       },
       {
           img:webAppServiceCardImage,
-          serviceTitle:'Web/App Upgradation',
-          serviceDescription:'Updating and enhancing an existing website to improve its performance, security, and user experience.',
+          serviceTitle:'Development',
+          serviceDescription:'Development involves creating, improving, and maintaining software applications and systems efficiently.',
           serviceIcon:webAppServiceCardIcon,
       },
       {
           img:AppDevelopmentServiceCardImage,
-          serviceTitle:'App Development',
-          serviceDescription:'Development involves the process of creating software applications for mobile devices.',
+          serviceTitle:'UIUX',
+          serviceDescription:'UI/UX focuses on creating intuitive, visually appealing, and user-friendly designs.',
           serviceIcon:appDevelopmentServiceCardIcon,
       },
       {
           img:webDevelopmentServiceCardImage,
-          serviceTitle:'Web Development',
-          serviceDescription:'Web development involves the creation and maintenance of websites and web applications.',
+          serviceTitle:'AI Integration',
+          serviceDescription:'AI integration enhances systems by embedding intelligent automation and decision-making capabilities.',
           serviceIcon:webDevelopmentServiceCardIcon
       },
       {
           img:dataSercurityServiceCardImage,
-          serviceTitle:'Data security and protection',
-          serviceDescription:'Involves safeguarding data from unauthorized access and ensuring its privacy, integrity, and legal compliance.',
+          serviceTitle:'DataOps',
+          serviceDescription:'DataOps streamlines data pipeline management, improving collaboration, automation, and efficiency.',
           serviceIcon:dataSercurityServiceCardIcon,
       },
       {
-          img:cyberSecurityServiceCardImage,
-          serviceTitle:'Cyber Security',
-          serviceDescription:'The protection of systems, networks and data from cyber threats and attacks.',
+          img:bigDataImage,
+          serviceTitle:'Big Data',
+          serviceDescription:'Big Data involves large, complex datasets analyzed for insights and decision-making.',
+          serviceIcon:cyberSecurityServiceCardIcon,
+      },
+      {
+          img:testingImage,
+          serviceTitle:'Testing services',
+          serviceDescription:'Testing services ensure software quality, performance, security, and bug-free functionality.',
+          serviceIcon:cyberSecurityServiceCardIcon,
+      },
+      {
+          img:ContainerisationImage,
+          serviceTitle:'Containerisation Tools',
+          serviceDescription:'Containerization ensures consistent, portable, and efficient application deployment.',
+          serviceIcon:cyberSecurityServiceCardIcon,
+      },
+      {
+          img:cmsEcommerceImage,
+          serviceTitle:'CMS E-commerce',
+          serviceDescription:'CMS eCommerce platforms enable easy online store management, customization, and scalability.',
           serviceIcon:cyberSecurityServiceCardIcon,
       },
   ]

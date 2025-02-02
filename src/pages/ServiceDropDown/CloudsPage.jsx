@@ -3,14 +3,14 @@ import TopNavbar from '../../components/TopNavbar/TopNavbar'
 import CloudsService from '../../components/ServiceDetailsCard/Clouds'
 import ContactSection from '../../components/ContactSection/ContactSection'
 import FooterSection from '../../components/FooterSection/FooterSection'
-import AppDevelopmentServiceImage from "../../assets/images/AppDevelopmentServiceImage.png";
+import cloudServiceImage from "../../assets/images/clouds.png";
 import HeroSection from '../../components/HeroSection/HeroSection';
 const Clouds = () => {
     const heroSectionContent = {
         paragraph: 'Cloud services provide on-demand access to computing resources like storage, processing power, and software, enabling remote business management and scalability.',
         normalHeading: 'Grow Your Business With ',
         coloredHeading: 'Cloud Services',
-        image: AppDevelopmentServiceImage
+        image: cloudServiceImage
     };
     return (
         <div>

@@ -1,16 +1,17 @@
 import React from 'react'
 import TopNavbar from '../../components/TopNavbar/TopNavbar'
-import AppDevelopment from '../../components/ServiceDetailsCard/AppDevelopment'
+import PlatformServices from '../../components/ServiceDetailsCard/PlatformServices'
 import ContactSection from '../../components/ContactSection/ContactSection'
 import FooterSection from '../../components/FooterSection/FooterSection'
-import AppDevelopmentServiceImage from "../../assets/images/AppDevelopmentServiceImage.png";
+import platformServicesImage from "../../assets/images/platform-services.png";
 import HeroSection from '../../components/HeroSection/HeroSection';
-const AppDevelopmentPage = () => {
+const PlatformServicesPage = () => {
     const heroSectionContent = {
-        paragraph: 'Revolutionize user experiences with cutting-edge mobile and web applications tailored to your business needs. Transform ideas into reality with seamless app development.',
-        normalHeading: 'Grow Your Business With ',
-        coloredHeading: 'App Development',
-        image: AppDevelopmentServiceImage
+        paragraph:
+            'Leverage cutting-edge platform services to transform your business. From data visualization with Power BI, automating business processes with ServiceNow, to driving customer success with Salesforce, we offer tailored solutions for every need.',
+        normalHeading: 'Elevate Your Business With ',
+        coloredHeading: 'Platform Services',
+        image: platformServicesImage,
     };
     return (
         <div>
@@ -24,11 +25,11 @@ const AppDevelopmentPage = () => {
                 buttonTitle='Get In Touch'
                 showButton={true}
             />
-            <AppDevelopment />
+            <PlatformServices />
             <ContactSection />
             <FooterSection />
         </div>
     )
 }
 
-export default AppDevelopmentPage
+export default PlatformServicesPage

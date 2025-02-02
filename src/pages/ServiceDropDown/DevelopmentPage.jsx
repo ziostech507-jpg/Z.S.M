@@ -1,16 +1,17 @@
 import React from 'react'
 import TopNavbar from '../../components/TopNavbar/TopNavbar'
+// import AppDevelopment from '../../components/ServiceDetailsCard/AppDevelopment'
 import ContactSection from '../../components/ContactSection/ContactSection'
 import FooterSection from '../../components/FooterSection/FooterSection'
-import dataOpsImage from "../../assets/images/dataOps.png";
+import AppDevelopmentServiceImage from "../../assets/images/AppDevelopmentServiceImage.png";
 import HeroSection from '../../components/HeroSection/HeroSection';
-import DataOpsService from '../../components/ServiceDetailsCard/DataOps'
-const DataOps = () => {
+import Development from '../../components/ServiceDetailsCard/Development'
+const AppDevelopmentPage = () => {
     const heroSectionContent = {
-        paragraph:'DataOps is a set of practices combining data engineering and operations, aimed at improving data pipeline efficiency, collaboration, and automation across teams.',
+        paragraph: 'Empower your business with top-notch development solutions, including web and mobile applications. Build seamless digital experiences with modern technologies.',
         normalHeading: 'Grow Your Business With ',
-        coloredHeading: 'DataOps',
-        image: dataOpsImage
+        coloredHeading: 'Development',
+        image: AppDevelopmentServiceImage
     };
     return (
         <div>
@@ -24,11 +25,11 @@ const DataOps = () => {
                 buttonTitle='Get In Touch'
                 showButton={true}
             />
-            <DataOpsService />
+            <Development />
             <ContactSection />
             <FooterSection />
         </div>
     )
 }
 
-export default DataOps
+export default AppDevelopmentPage

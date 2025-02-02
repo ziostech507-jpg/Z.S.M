@@ -1,6 +1,6 @@
 import React from 'react'
 import "./ServiceDetailsCard.css";
-import AiMlServiceImage from "../../assets/images/AiMlServiceImage.png";
+import testingImage from "../../assets/images/testingImage.png";
 
 
 const Testing = () => {
@@ -16,7 +16,7 @@ const Testing = () => {
                     Testing is a crucial process in software development that ensures the functionality, performance, security, and reliability of applications. It involves executing a program or system with the intent of identifying bugs or issues and verifying that the software behaves as expected. Testing types include unit testing, integration testing, system testing, and acceptance testing. Automation tools, such as Selenium, Jest, and Playwright, are commonly used to streamline and accelerate testing workflows. Effective testing improves software quality, enhances user experience, and reduces the risk of defects in production. It is an essential step in the software development lifecycle, ensuring robust applications.
                     </p>
                     <div>
-                        <img src={AiMlServiceImage} alt="AI/ML Projects" />
+                        <img src={testingImage} alt="AI/ML Projects" />
                     </div>
                 </div>
                 <div className="serviceTechDescriptionContainer">

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./ServiceDetailsCard.css";
-import AiMlServiceImage from "../../assets/images/AiMlServiceImage.png";
+import bigDataImage from "../../assets/images/bigData.png";
 
 
 const BigData = () => {
@@ -16,7 +16,7 @@ const BigData = () => {
                     Big Data refers to vast and complex datasets that are too large to be processed using traditional data-processing tools. It involves capturing, storing, and analyzing large volumes of structured, semi-structured, and unstructured data from various sources such as social media, sensors, transaction records, and more. Big Data technologies like Hadoop, Spark, and NoSQL databases enable the storage and analysis of these massive datasets in real time. By extracting valuable insights from Big Data, businesses can make data-driven decisions, improve operations, enhance customer experiences, and uncover new opportunities, leading to more informed strategic planning and innovation.
                     </p>
                     <div>
-                        <img src={AiMlServiceImage} alt="AI/ML Projects" />
+                        <img src={bigDataImage} alt="AI/ML Projects" />
                     </div>
                 </div>
                 <div className="serviceTechDescriptionContainer">

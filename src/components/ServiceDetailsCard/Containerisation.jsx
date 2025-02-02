@@ -1,6 +1,6 @@
 import React from 'react'
 import "./ServiceDetailsCard.css";
-import AiMlServiceImage from "../../assets/images/AiMlServiceImage.png";
+import containerisationImage from "../../assets/images/containerisation.png";
 
 
 const Containerisation = () => {
@@ -16,7 +16,7 @@ const Containerisation = () => {
                     Containerization is a lightweight form of virtualization that packages software and its dependencies into isolated units called containers. These containers run consistently across different computing environments, from development to production, ensuring that the application works the same way regardless of the host system. Unlike traditional virtual machines, containers share the same OS kernel, making them more efficient and faster to deploy. Popular tools like Docker and Kubernetes help manage and orchestrate containers. Containerization simplifies development workflows, improves scalability, and enhances portability, making it easier to deploy and maintain applications in cloud or on-premise environments.
                     </p>
                     <div>
-                        <img src={AiMlServiceImage} alt="AI/ML Projects" />
+                        <img src={containerisationImage} alt="AI/ML Projects" />
                     </div>
                 </div>
                 <div className="serviceTechDescriptionContainer">

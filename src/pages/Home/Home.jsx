@@ -16,6 +16,7 @@ import ServiceCardSwiper from '../../components/ServiceCard/ServiceCardSwiper'
 import AiMLServiceCardImage from '../../assets/images/AiMlServiceCardImage.png';
 import AiXpertSitesCardimage from '../../assets/images/AiXpertSitesCardimage.png';
 import personalSoftwareServiceCardImage from '../../assets/images/personalSoftwareServiceCardImage.png';
+
 // service Card Icons
 import aiMlServiceIcon from '../../assets/Icons/AiMlServiceIcon.png'
 import AiXpertsiteServiceIcon from '../../assets/Icons/AiXpertsiteServiceIcon.png'
@@ -34,21 +35,21 @@ const Home = () => {
   const serviceCardData = [
     {
       img: AiMLServiceCardImage,
-      serviceTitle: 'AI/ML Projects',
-      serviceDescription: 'Forefront of technology, innovation across industries by more intelligent and automated solutions.',
+      serviceTitle: 'Platform Services',
+      serviceDescription: 'Platform services offer tools and infrastructure for efficient application development and management.',
       serviceIcon: aiMlServiceIcon,
 
     },
     {
       img: AiXpertSitesCardimage,
-      serviceTitle: 'AIXpertSites',
-      serviceDescription: 'A blend of "AI" and "Expert," emphasizing your expertise in creating AI-powered websites.',
+      serviceTitle: 'Cloud Services',
+      serviceDescription: 'Cloud services provide scalable, on-demand computing resources for businesses and applications.',
       serviceIcon: AiXpertsiteServiceIcon,
     },
     {
       img: personalSoftwareServiceCardImage,
-      serviceTitle: 'Personal Software for Business',
-      serviceDescription: 'To streamline workflows, improve productivity, and make it easier to organize and automate routine tasks. ',
+      serviceTitle: 'Data Visualisation',
+      serviceDescription: 'Data visualization transforms data into visual formats for easy analysis and interpretation.',
       serviceIcon: personalSoftwareServiceCardIcon,
     },
 

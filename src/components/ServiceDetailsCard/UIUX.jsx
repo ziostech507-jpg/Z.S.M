@@ -1,6 +1,6 @@
 import React from 'react'
 import "./ServiceDetailsCard.css";
-import AiMlServiceImage from "../../assets/images/AiMlServiceImage.png";
+import uiuxImage from "../../assets/images/uiux.png";
 
 
 const UIUX = () => {
@@ -16,7 +16,7 @@ const UIUX = () => {
                     UI/UX design plays a crucial role in enhancing the overall user experience of digital products. UI (User Interface) refers to the visual elements, layout, colors, typography, and interactive components that a user interacts with. UX (User Experience) focuses on the overall experience of the user, ensuring that the product is intuitive, user-friendly, and meets the user's needs. UX design involves research, wireframing, prototyping, and usability testing to create a seamless interaction flow. Together, UI and UX aim to build visually appealing, functional, and engaging products that provide a smooth and satisfying experience for users.
                     </p>
                     <div>
-                        <img src={AiMlServiceImage} alt="AI/ML Projects" />
+                        <img src={uiuxImage} alt="AI/ML Projects" />
                     </div>
                 </div>
                 <div className="serviceTechDescriptionContainer">

@@ -2,15 +2,15 @@ import React from 'react'
 import TopNavbar from '../../components/TopNavbar/TopNavbar'
 import ContactSection from '../../components/ContactSection/ContactSection'
 import FooterSection from '../../components/FooterSection/FooterSection'
-import AppDevelopmentServiceImage from "../../assets/images/AppDevelopmentServiceImage.png";
+import smartBotImage from "../../assets/images/smartBot.png";
 import HeroSection from '../../components/HeroSection/HeroSection';
 import SmartBotsServices from '../../components/ServiceDetailsCard/SmartBots'
 const SmartBots = () => {
     const heroSectionContent = {
         paragraph:'SmartBot Website Integration enables AI-powered chatbots to interact with website visitors, automate customer support, and enhance user engagement.',
         normalHeading: 'Grow Your Business With',
-        coloredHeading: 'Smart Bot',
-        image: AppDevelopmentServiceImage
+        coloredHeading: 'AI Integration',
+        image: smartBotImage
     };
     return (
         <div>

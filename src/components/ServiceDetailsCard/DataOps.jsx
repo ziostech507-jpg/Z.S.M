@@ -1,6 +1,6 @@
 import React from 'react'
 import "./ServiceDetailsCard.css";
-import AiMlServiceImage from "../../assets/images/AiMlServiceImage.png";
+import dataOpsImage from "../../assets/images/dataOps.png";
 
 
 const DataOps = () => {
@@ -16,7 +16,7 @@ const DataOps = () => {
                     DataOps is an emerging practice focused on streamlining and automating the end-to-end data lifecycle, from data collection to processing and analysis. It combines principles from DevOps and Agile methodologies to improve the collaboration between data engineers, data scientists, and business teams. DataOps emphasizes continuous integration, continuous delivery, and automation in data workflows, ensuring faster, more reliable, and scalable data management. By promoting collaboration, transparency, and agility, DataOps helps organizations reduce data bottlenecks, enhance data quality, and accelerate data-driven decision-making. This approach ensures that data is always accessible, accurate, and aligned with business goals.
                     </p>
                     <div>
-                        <img src={AiMlServiceImage} alt="AI/ML Projects" />
+                        <img src={dataOpsImage} alt="AI/ML Projects" />
                     </div>
                 </div>
                 <div className="serviceTechDescriptionContainer">

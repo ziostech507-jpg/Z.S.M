@@ -1,14 +1,13 @@
 import React from 'react'
 import "./ServiceDetailsCard.css";
-import AiMlServiceImage from "../../assets/images/AiMlServiceImage.png";
-
+import smartBotImage from "../../assets/images/smartBot.png";
 
 const SmartBots = () => {
     return (
         <div>
             <div className="serviceDetailsCardContainer">
                 <h1>
-                    <span className="serviceHeadingTitle">SmartBots
+                    <span className="serviceHeadingTitle">AI Integration
                     </span>
                 </h1>
                 <div className="ServiceCardDescriptionContainer">
@@ -16,7 +15,7 @@ const SmartBots = () => {
                     AI-Powered Bots and Smart Websites use advanced artificial intelligence models to enhance user experiences by providing intelligent interactions, automation, and personalized services. These bots, often integrated with machine learning and natural language processing (NLP), can understand and respond to user queries in real time, making customer support more efficient. Websites with integrated AI can analyze user behavior, recommend products, or optimize content based on individual preferences. Additionally, they automate repetitive tasks, improve decision-making, and assist with data analysis. Popular examples include AI chatbots, recommendation engines, and virtual assistants, all of which improve engagement and drive better business outcomes.
                     </p>
                     <div>
-                        <img src={AiMlServiceImage} alt="AI/ML Projects" />
+                        <img src={smartBotImage} alt="AI/ML Projects" />
                     </div>
                 </div>
                 <div className="serviceTechDescriptionContainer">

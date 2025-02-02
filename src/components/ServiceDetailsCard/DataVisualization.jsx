@@ -1,6 +1,6 @@
 import React from 'react'
 import "./ServiceDetailsCard.css";
-import AiMlServiceImage from "../../assets/images/AiMlServiceImage.png";
+import dataVisualizationImage from "../../assets/images/dataVisualization.png";
 
 
 const DataVisualization = () => {
@@ -16,7 +16,7 @@ const DataVisualization = () => {
                     Data Visualization is the graphical representation of data and information, using charts, graphs, maps, and other visual tools to help people understand trends, patterns, and insights within large datasets. By transforming raw data into visual formats, it makes complex data easier to comprehend and analyze, aiding in decision-making. Tools like Tableau, Power BI, and Google Data Studio are commonly used to create interactive dashboards, reports, and real-time visualizations. Effective data visualization enhances communication, enabling businesses to spot key trends, monitor performance, and present data in a more engaging and accessible way for stakeholders at all levels.
                     </p>
                     <div>
-                        <img src={AiMlServiceImage} alt="AI/ML Projects" />
+                        <img src={dataVisualizationImage} alt="AI/ML Projects" />
                     </div>
                 </div>
                 <div className="serviceTechDescriptionContainer">

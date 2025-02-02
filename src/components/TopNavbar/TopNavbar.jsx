@@ -507,7 +507,31 @@ const TopNavbar = () => {
           {/* Small screen dropdown */}
           {menuOpen && showServicesDropdown && (
             <ul className="servicesDropdownMenu">
-            
+
+              <li
+                onClick={() => {
+                  navigate("/platform-services");
+                  setMenuOpen(false);
+                }}
+              >
+               Platform Services
+              </li>
+              <li
+                onClick={() => {
+                  navigate("/developement");
+                  setMenuOpen(false);
+                }}
+              >
+                Development
+              </li>
+              <li
+                onClick={() => {
+                  navigate("/cms-ecommerce");
+                  setMenuOpen(false);
+                }}
+              >
+               CMS E-commerce
+              </li>
               <li
                 onClick={() => {
                   navigate("/clouds");
@@ -548,22 +572,8 @@ const TopNavbar = () => {
               >
                 Big Data
               </li>
-              <li
-                onClick={() => {
-                  navigate("/app-developement");
-                  setMenuOpen(false);
-                }}
-              >
-                App Development
-              </li>
-              <li
-                onClick={() => {
-                  navigate("/web-developement");
-                  setMenuOpen(false);
-                }}
-              >
-                Web Development
-              </li>
+             
+             
               <li
                 onClick={() => {
                   navigate("/data-visualisation");
@@ -578,7 +588,7 @@ const TopNavbar = () => {
                   setMenuOpen(false);
                 }}
               >
-               Smart Bot
+               AI Integration
               </li>
             </ul>
           )}
@@ -620,15 +630,15 @@ const TopNavbar = () => {
         ☰
       </button> */}
       <button
-      //  className="menuToggleButton" onClick={toggleMenu}
-      className={`menuToggleButton ${menuOpen ? "rotate" : ""}`}
-      onClick={toggleMenu}
-       >
+        //  className="menuToggleButton" onClick={toggleMenu}
+        className={`menuToggleButton ${menuOpen ? "rotate" : ""}`}
+        onClick={toggleMenu}
+      >
         {menuOpen ? (
-          <RxCross2 
-          // className="closeMenuIcon"
-          className={`closeMenuIcon ${menuOpen ? "fade" : ""}`}
-           />
+          <RxCross2
+            // className="closeMenuIcon"
+            className={`closeMenuIcon ${menuOpen ? "fade" : ""}`}
+          />
         ) : (
           // "☰"
           <HiMiniBars3CenterLeft />

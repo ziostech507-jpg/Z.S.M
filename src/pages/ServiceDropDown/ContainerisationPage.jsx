@@ -3,14 +3,14 @@ import TopNavbar from '../../components/TopNavbar/TopNavbar'
 import ContainerisationService from '../../components/ServiceDetailsCard/Containerisation'
 import ContactSection from '../../components/ContactSection/ContactSection'
 import FooterSection from '../../components/FooterSection/FooterSection'
-import AppDevelopmentServiceImage from "../../assets/images/AppDevelopmentServiceImage.png";
+import containerisationImage from "../../assets/images/containerisation.png";
 import HeroSection from '../../components/HeroSection/HeroSection';
 const Containerisation = () => {
     const heroSectionContent = {
         paragraph:'Containerization tools enable efficient software deployment by packaging applications and dependencies into isolated containers, ensuring consistency across environments and scalability.',
         normalHeading: 'Grow Your Business With ',
         coloredHeading: 'Containerization Tools',
-        image: AppDevelopmentServiceImage
+        image: containerisationImage
     };
     return (
         <div>

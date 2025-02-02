@@ -2,7 +2,7 @@ import React from 'react'
 import TopNavbar from '../../components/TopNavbar/TopNavbar'
 import ContactSection from '../../components/ContactSection/ContactSection'
 import FooterSection from '../../components/FooterSection/FooterSection'
-import AppDevelopmentServiceImage from "../../assets/images/AppDevelopmentServiceImage.png";
+import bigDataImage from "../../assets/images/bigData.png";
 import HeroSection from '../../components/HeroSection/HeroSection';
 import BigDataService from '../../components/ServiceDetailsCard/BigData'
 const BigData = () => {
@@ -10,7 +10,7 @@ const BigData = () => {
         paragraph: 'Big data refers to large, complex datasets analyzed for insights, helping businesses make data-driven decisions and identify trends and patterns.',
         normalHeading: 'Grow Your Business With ',
         coloredHeading: 'BigData Services',
-        image: AppDevelopmentServiceImage
+        image: bigDataImage
     };
     return (
         <div>

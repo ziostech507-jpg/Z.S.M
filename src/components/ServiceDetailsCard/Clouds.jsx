@@ -1,6 +1,6 @@
 import React from 'react'
 import "./ServiceDetailsCard.css";
-import AiMlServiceImage from "../../assets/images/AiMlServiceImage.png";
+import cloudImage from "../../assets/images/clouds.png";
 
 
 const AiMlProjects = () => {
@@ -16,7 +16,7 @@ const AiMlProjects = () => {
                     Cloud Services refer to a wide range of computing services delivered over the internet, including storage, computing power, databases, networking, software, and analytics. These services eliminate the need for businesses to maintain physical servers and infrastructure. Cloud providers like AWS, Microsoft Azure, and Google Cloud offer scalable, flexible, and cost-effective solutions that allow businesses to access resources on-demand. Users can easily scale up or down based on their needs, ensuring efficiency and reducing costs. Cloud services enable remote work, enhance collaboration, improve security, and provide disaster recovery solutions, making them essential for modern businesses.
                     </p>
                     <div>
-                        <img src={AiMlServiceImage} alt="AI/ML Projects" />
+                        <img src={cloudImage} alt="AI/ML Projects" />
                     </div>
                 </div>
                 <div className="serviceTechDescriptionContainer">
