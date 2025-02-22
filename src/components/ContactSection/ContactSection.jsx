@@ -27,22 +27,27 @@ const ContactSection = () => {
         to_email: "ziostechdirector2024@gmail.com",
         to_name: "Aditya Singh"
     }
-    // console.log(templateParams)
+    console.log(templateParams)
     const send = (e) => {
-        // const YOUR_SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID
-        // const YOUR_TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID
-        // const YOUR_PUBLIC_KEY = process.env.REACT_APP_YOUR_PUBLIC_KEY
+        const YOUR_SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID
+        const YOUR_TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID
+        const YOUR_PUBLIC_KEY = process.env.REACT_APP_YOUR_PUBLIC_KEY
         e.preventDefault();
 
-        // emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, templateParams, YOUR_PUBLIC_KEY)
-        //     .then(
-        //         () => {
-        //             console.log('SUCCESS!');
-        //         },
-        //         (error) => {
-        //             console.log('FAILED...', error.text);
-        //         }
-        //     );
+        emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, templateParams, YOUR_PUBLIC_KEY)
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                }
+            );
+        setName("");
+        setEmail("");
+        setPhone("");
+        setComapany("");
+        setMessage("");
 
     };
 
@@ -57,23 +62,23 @@ const ContactSection = () => {
                         <form onSubmit={send}>
                             <div className="form-group">
                                 <label htmlFor="fullName">Full Name</label>
-                                <input type="text" id="fullName" name="from_name" onChange={(e) => setName(e.target.value)} />
+                                <input type="text" id="fullName" name="from_name" value={name} onChange={(e) => setName(e.target.value)} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="email">Email Address</label>
-                                <input type="email" id="email" name="from_email" onChange={(e) => setEmail(e.target.value)} />
+                                <input type="email" id="email" name="from_email" value={email} onChange={(e) => setEmail(e.target.value)} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="from_phone" onChange={(e) => setPhone(e.target.value)} />
+                                <input type="tel" id="phone" name="from_phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="company">Company Name</label>
-                                <input type="text" id="company" name="from_company" onChange={(e) => setComapany(e.target.value)} />
+                                <input type="text" id="company" name="from_company" value={company} onChange={(e) => setComapany(e.target.value)} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="projectDescription">Short Description of Your Project</label>
-                                <textarea id="projectDescription" rows="4" name="message" onChange={(e) => setMessage(e.target.value)}></textarea>
+                                <textarea id="projectDescription" rows="4" name="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                             </div>
                             <button type="submit" className="submit-btn" value="Send">Submit</button>
                         </form>
