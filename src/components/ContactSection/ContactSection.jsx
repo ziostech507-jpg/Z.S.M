@@ -320,7 +320,7 @@ const ContactSection = () => {
                                         <div className="location-details">
 
                                             {/* <p> H 2203, Tower-H, Ajnara Lee Garden, Greater Noida West, Sector 16-B, 201301</p> */}
-                                            <p>H.No - 104A, Sundarshan Society Vinayakpur Kanpur Nagar, Uttar Pradesh, India 208024, IN</p>
+                                            <p>H.No - 104A, Vinayakpur Kanpur Nagar, Uttar Pradesh, India 208024, IN</p>
                                         </div>
                                     </div>
 
